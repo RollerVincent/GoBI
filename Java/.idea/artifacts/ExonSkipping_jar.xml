@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ExonSkipping:jar">
+    <output-path>$PROJECT_DIR$/../Jars</output-path>
+    <root id="archive" name="ExonSkipping.jar">
+      <element id="module-output" name="Java" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src" />
+    </root>
+  </artifact>
+</component>
