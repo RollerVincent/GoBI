@@ -58,11 +58,11 @@ var points_g = svg.append("g")
 
 
 var groups = {};
-var data = [];
+//var data = [];
 var gX;
 var gY;
-d3.csv("https://raw.githubusercontent.com/RollerVincent/GoBI/master/Resources/plot_data/exon_skipping/test_plot_bases.csv", function(csv) {
-	data=csv;	
+d3.csv("https://raw.githubusercontent.com/RollerVincent/GoBI/master/Resources/plot_data/exon_skipping/test_plot_exons.csv", function(csv) {
+	var data=csv;	
 	data.forEach(function(d){
 		if(!Object.keys(groups).includes(d.group)){
 			groups[d.group] = [];
@@ -93,32 +93,24 @@ d3.csv("https://raw.githubusercontent.com/RollerVincent/GoBI/master/Resources/pl
 	for(var i in keys){
 		points_g.append('path')
   		.attr('d', line(groups[keys[i]]))
-  		.attr('stroke', '#e2e2e2')
-  		.attr('stroke-width', 7)
+  		.attr('stroke', colors[keys.indexOf(keys[i])%colors.length])
+  		.attr('stroke-width', 3)
   		.attr('fill', 'none')
 		.attr('group', keys[i]);
 	}
 	
-	points_g.selectAll("circle").data(data)
+/*	points_g.selectAll("circle").data(data)
 	.enter().append("circle")
 	      .attr('cx', function(d) {
-			  var x = parseInt(d.x);
-			  if (x>Xmax){
-				  Xmax=x; 
-			  }
-			  return xScale(x);
+			  return xScale(d.x);
 		  })
 	      .attr('cy', function(d) {
-			  var y = parseInt(d.y);
-			  if (y>Ymax){
-				  Ymax=y;  
-			  }
-			  return yScale(y);
+			  return yScale(d.y);
 		  })
 	      .attr('r', 1)
 		  .attr('fill',function(d){
 			  return colors[Object.keys(groups).indexOf(d.group)%colors.length];
-		  });
+		  });*/
 		  
 });
 
@@ -153,9 +145,9 @@ function zoomed() {
 		d3.select(this).attr('d', line(groups[d3.select(this).attr('group')]));
 	});
  
-    points_g.selectAll('circle').data(data)
-     .attr('cx', function(d) {return new_xScale(d.x)})
-     .attr('cy', function(d) {return new_yScale(d.y)});
+   // points_g.selectAll('circle').data(data)
+     //.attr('cx', function(d) {return new_xScale(d.x)})
+     //.attr('cy', function(d) {return new_yScale(d.y)});
 	 
 }
 </script>
