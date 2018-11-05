@@ -1,62 +1,18 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<svg width="1000" height="500"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-
-<script>
-	
-	var menu=false;
-	function menu_click(evt){
-		if(!menu){
-			document.getElementById("menu").style.top = "5vh";
-			evt.target.setAttribute('fill', '#f2982b');
-			menu=true;
-		}else{
-			document.getElementById("menu").style.top = "-60vh";
-			evt.target.setAttribute('fill', '#a4d85f');
-			menu=false;
-		}
-	}
-	function mouseover_menu(evt){
-		if(!menu){
-			evt.target.setAttribute('fill', '#a4d85f');
-		}
-	}
-	function mouseout_menu(evt){
-		if(!menu){
-			evt.target.setAttribute('fill', '#aaaaaa');
-		}
-	}
-	
-	
-</script>
 <html>
+	<head>
+	<meta charset="utf-8">
+	<script src="nice.js"></script>
+	</head>
 	<body>
-		<div id="menu" style="font-weight:bold; font-family:monospace; color:#666666; padding:1vh; box-shadow: 0px 0px 5px #888888; height:60vh; width:20vw; position:absolute; top:-60vh; left:1vh; border-radius:10px; background-color:#dfdfdf; -webkit-transition: top 1s; transition: top 1s;">
-			
-			<div style="float:left; display:flex; align-items:center;  ">
-				<img src="https://github.com/RollerVincent/GoBI/blob/master/Resources/Images/dna_logo.png?raw=true" style="width:6vh; height:6vh;">
-				<div style="align:center; position:relative; left:-6vh; top:3vh; height:2px; width:20vw; background-color:#666666; border-radius:4px">
-					
-					<div style="position:relative; top:-3vh;">Table of Contents</div>
-					
-				</div>
-				
-			</div>
-			
-			
-			
-			
-		</div>
-		<div style=" box-shadow: 0px 0px 5px #888888; display:flex; align-items:center; padding-left:1vh; font-weight:bold; font-family:monospace; color:#666666; height:4vh; width:100vw; position:absolute; top:0; left:0; background-color:#dfdfdf;">
-			<svg style="width:4vh; height:4vh;">
-				<circle onclick="menu_click(evt)" cx="2vh" cy="2vh" r="1vh" fill="#aaaaaa" onmouseover="mouseover_menu(evt)" onmouseout="mouseout_menu(evt)"/>
-			</svg>
-			Praktikum Genomorientierte Bioinformatik
-			
-			
-			
-		</div>
+	
+		<div id='menu_container' style='width:100vw; position:absolute; top:0; left:0;'></div>
+		
+		
+		
 		
 	</body>
+	<script>
+		nice_menu('menu_container','Praktikum Genomorientierte Bioinformatik');
+	</script>
 </html>

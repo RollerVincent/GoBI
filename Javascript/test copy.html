@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="nice.js"></script>
+<script>
+	nice_menu('menu_container','fufufufufufuf');
+</script>
+
+
+<script>
+	
+	var menu=false;
+	function menu_click(evt){
+		if(!menu){
+			document.getElementById("menu").style.top = "5vh";
+			evt.target.setAttribute('fill', '#f2982b');
+			menu=true;
+		}else{
+			document.getElementById("menu").style.top = "-60vh";
+			evt.target.setAttribute('fill', '#a4d85f');
+			menu=false;
+		}
+	}
+	function mouseover_menu(evt){
+		if(!menu){
+			evt.target.setAttribute('fill', '#a4d85f');
+		}
+	}
+	function mouseout_menu(evt){
+		if(!menu){
+			evt.target.setAttribute('fill', '#aaaaaa');
+		}
+	}
+	
+	
+	
+	
+</script>
+<html>
+	<body>
+		<div></div>
+		
+		
+		
+		
+		<div id="menu" style="font-weight:bold; font-family:monospace; color:#666666; padding:1vh; box-shadow: 0px 0px 5px #888888; height:4vh; position:absolute; top:-60vh; left:1vh; border-radius:10px; background-color:#dfdfdf; -webkit-transition: top 1s; transition: top 1s;">
+			
+			<div>
+				<img src="https://github.com/RollerVincent/GoBI/blob/master/Resources/Images/dna_logo.png?raw=true" style="float:left; width:2vh; height:4vh;">
+				<div style="position:relative; left:1vh;">Table Of Contents</div>
+			</div>	
+					
+		</div>
+		
+		<div style=" box-shadow: 0px 0px 5px #888888; display:flex; align-items:center; padding-left:1vh; font-weight:bold; font-family:monospace; color:#666666; height:4vh; width:100vw; position:absolute; top:0; left:0; background-color:#dfdfdf;">
+			<svg style="width:4vh; height:4vh;">
+				<circle onclick="menu_click(evt)" cx="2vh" cy="2vh" r="1vh" fill="#aaaaaa" onmouseover="mouseover_menu(evt)" onmouseout="mouseout_menu(evt)"/>
+			</svg>
+			Praktikum Genomorientierte Bioinformatik
+		</div>
+		<div style="position:relative; top:4vh;">fufufufufufufufufuffufuuffuufufu<br>gugugugugugugugugugu<br>jujujujujujujuju<br>kukukukuku</div>
+		
+	</body>
+</html>
