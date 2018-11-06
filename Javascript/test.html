@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
+
+
 	<head>
-	<meta charset="utf-8">
-	<script src="nice.js"></script>
+		<meta charset="utf-8">
 	</head>
+	
+	
 	<body>
+		<script src="nice.js"></script>
+		
+	
+	
 	
 		<div id='menu_container' style='width:100vw; position:absolute; top:0; left:0;'></div>
+		<div id='menu_container2' style='width:100vw; position:absolute; top:50vh; left:0;'></div>
 		
 		
-		
+		<script>
+			var dna_icon = 'https://github.com/RollerVincent/GoBI/blob/master/Resources/Images/dna_logo.png?raw=true';
+			var menu = nice.menu('menu_container','Praktikum Genomorientierte Bioinformatik');
+			menu.add('Exon Skipping',icon=dna_icon);
+			menu.add('Eppes Aanescht',icon=dna_icon);
+			
+			var menus2 = nice.menu('menu_container2','Praktikum Genomorientierte Bioinformatik');
+			menus2.add('<u><b>Table Of Content<b><u>');
+			menu.add('Exon Skipping', icon = dna_icon);
+			menu.add('Eppes Aanescht', icon = dna_icon);
+		</script>
 		
 	</body>
-	<script>
-		nice_menu('menu_container','Praktikum Genomorientierte Bioinformatik');
-	</script>
+	
+	
 </html>
