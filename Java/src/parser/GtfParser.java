@@ -128,6 +128,9 @@ public class GtfParser implements Iterable<Gene> {
                                 if(codingSequence.id==null){
                                     codingSequence.id = codingSequence.getAttribute("ccsdid");
                                 }
+                                if(codingSequence.id==null){
+                                    codingSequence.id = transcript.id+"_CDS";
+                                }
                                 transcript.codingSequence = codingSequence;
                                 gene.codingTranscripts.add(transcript);
                             }

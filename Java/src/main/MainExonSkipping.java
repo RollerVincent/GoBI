@@ -7,6 +7,10 @@ import parser.Parser;
 import tools.ExonSkipping;
 
 import java.io.*;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class MainExonSkipping {
     public static void main(String[] args) {
@@ -15,6 +19,8 @@ public class MainExonSkipping {
         argParser.addOption("-gtf",true,false);
         argParser.addOption("-o",true,false);
         argParser.addOption("-plot",false,true);
+        argParser.addOption("-b",false,true);
+
 
         if(argParser.Compile()){
 
@@ -25,52 +31,95 @@ public class MainExonSkipping {
             ExonSkipping skipping = new ExonSkipping();
             BufferedWriter writer = Parser.Writer(output);
 
-            try {
-                writer.write("id\tsymbol\tchr\tstrand\tnprots\tntrans\tSV\tWT\tWT_prots\tSV_prots\tmin_skipped_exon\tmax_skipped_exon\tmin_skipped_bases\tmax_skipped_bases\n");
-                for(Gene gene : parser){
-                    writer.write(skipping.getSkips(gene));
+            if(!argParser.hasArgument("-plot")) {
+                try {
+                    writer.write("id\tsymbol\tchr\tstrand\tnprots\tntrans\tSV\tWT\tWT_prots\tSV_prots\tmin_skipped_exon\tmax_skipped_exon\tmin_skipped_bases\tmax_skipped_bases\n");
+                    for (Gene gene : parser) {
+                        String skip = skipping.getSkips(gene);
+                        if(skip!=null) {
+                            if (!skip.equals("")) {
+                                writer.write(skipping.getSkips(gene));
+                            }
+                        }
+                    }
+                    writer.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                writer.close();
+            }else{
+                try {
 
-            } catch (IOException e) {
-                e.printStackTrace();
+                    TreeMap<Integer,String> ranked = new TreeMap<>();
+                    Set<String> chrs = new LinkedHashSet<>();
+
+
+                    writer.write("var plot_data = [\n");
+
+                    int ind = 11;
+                    if(argParser.hasArgument("-b")) {
+                        ind=13;
+                    }
+
+                    int x =0;
+                    int sum = 0;
+                    for (Gene gene : parser) {
+
+                        chrs.add(gene.chromosome);
+
+
+                        String skip = skipping.getSkips(gene);
+                        if(skip!=null) {
+                            if(x!=0){
+                                writer.write(",\n");
+                            }
+                            if(skip.equals("")){
+                                writer.write("{'x':"+x+",'y':"+sum+",'group':'"+gene.chromosome+"'}");
+
+                            }else{
+                                String[] l = skip.split("\n");
+                                int m = 0;
+                                for (int i = 0; i < l.length; i++) {
+                                    String[] s = l[i].split("\t");
+                                    int c = Integer.parseInt(s[ind]);
+                                    if(c>m){
+                                        m=c;
+                                    }
+                                }
+                                sum+=m;
+                                writer.write("{'x':"+x+",'y':"+sum+",'group':'"+gene.chromosome+"'}");
+                                ranked.put(-m,",\n{'x':"+x+",'y':"+sum+",'group':'ranked_"+gene.id+"','value':"+m+"}");
+                            }
+                            x+=1;
+                        }
+
+                    }
+                    int c = 0;
+                    for(Map.Entry<Integer,String> entry : ranked.entrySet()) {
+                        System.out.println(entry.getValue());
+                        if(c<10) {
+                            String value = entry.getValue();
+                            writer.write(value);
+                            c += 1;
+                        }
+
+                    }
+
+                    writer.write("];");
+                    writer.write("\nvar stats = ["+x+","+chrs.size()+"];");
+                    writer.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+
             }
-
-            if(argParser.hasArgument("-plot")){
-                ToPlot(output);
-            }
-
-
 
         }
 
 
     }
-    public static void ToPlot(String data){
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(data));
-            BufferedWriter writer = Parser.Writer(data.split("\\.")[0]+"_plot_exons.csv");
-            BufferedWriter writer2 = Parser.Writer(data.split("\\.")[0]+"_plot_bases.csv");
-            writer.write("x,y,group\n");
-            writer2.write("x,y,group\n");
-            int count = 0;
-            int exons = 0;
-            int bases = 0;
-            String line = reader.readLine();
-            while ((line = reader.readLine()) != null) {
-                String[] s = line.split("\t");
-                exons+=Integer.valueOf(s[11]);
-                bases+=Integer.valueOf(s[13]);
-                writer.write(count+","+exons+","+s[2]+"\n");
-                writer2.write(count+","+bases+","+s[2]+"\n");
-                count+=1;
-            }
-            writer.close();
-            writer2.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 }

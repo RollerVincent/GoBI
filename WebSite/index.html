@@ -1,166 +1,62 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<svg width="1000" height="500"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body style='margin:0;'>
+		
+		<script src="res/js/nice.js"></script>
+		<script src="res/js/exon_skipping.js"></script>
+		
+		<div style='background-color:#eeeeee; padding:6px; text-align: center;'><img src='res/img/GoBI_logo.png' style='height:70px;'></div>
+		
+		<div id='main_container' style = 'position:absolute; top:100px;'></div>
+		
+		<div id='main_menu' style='position:absolute; top:76px; width:100vw;'></div>
+		
+		<script>
 
+			var main_menu = nice.menu('main_menu','Home', 'tab_loader');
+			
+			nice.make_sticky('main_menu', 76);
+			
+			var dna_icon = 'res/img/dna_logo.png';
+			
+			main_menu.add('Home',icon=dna_icon);
+			main_menu.add('Exon Skipping',icon=dna_icon);
+			main_menu.add('Read Simulation', icon = dna_icon);
+			main_menu.add('Eppes Aanescht', icon = dna_icon);
+			main_menu.add('Allez Lo', icon=dna_icon);
+			
+			var tab_content;	
+			function tab_loader(tab){
+				main_menu.hide();
+				main_menu.refresh(tab);
+				if (tab == 'Exon Skipping'){
+					tab_content = new Exon_Skipping();
+				}else{
+					tab_content = null;
+					document.getElementById('main_container').innerHTML = '&nbsp';
+				}
+				window.scrollTo({top: 0,left: 0,behavior: 'smooth'});
+				if (tab_content){
+					tab_content.load();
+				}
+			}
 
-// dimensions and margins
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height"),
-width = 0.8*width;
-height = 0.8*height;
-var margin = {top: (0.1*width), right: (0.1*width), bottom: (0.1*width), left: (0.1*width)};
-
-// create a clipping region 
-svg.append("defs").append("clipPath")
-    .attr("id", "clip")
-  .append("rect")
-    .attr("width", width)
-    .attr("height", height);
-  
-
-
-	var Xmax=0;
-	var Ymax=0;
-
-  var xScale = d3.scaleLinear()
-  	.domain([0,Xmax])
-  	.range([0, width]);
-
-  var yScale = d3.scaleLinear()
-    .domain([0, Ymax])
-    .range([height, 0]);
+			var resizing = (function(){
+				document.getElementById('main_container').style.height = (document.documentElement.clientHeight - 24) + "px";
+				window.onresize = function(event) {
+					document.getElementById('main_container').style.height = (document.documentElement.clientHeight - 24) + "px";
+					if (tab_content){
+						tab_content.onresizeWindow(event);
+					}
+				};
+			})();
+			
+			tab_loader('Exon Skipping');
+			
+		</script>
 	
-
-	
-  // create axis objects
-  var xAxis = d3.axisBottom(xScale)
-    .ticks(20, "s");
-  var yAxis = d3.axisLeft(yScale)
-    .ticks(20, "s");
-
-// Draw Datapoints
-var points_g = svg.append("g")
-  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-  .attr("clip-path", "url(#clip)")
-  .classed("points_g", true);
-
-//data = genRandomData (n, max);
-
-
-
-
-var data = [];
-var points = [];
-var gX;
-var gY;
-d3.csv("https://raw.githubusercontent.com/RollerVincent/GoBI/master/Resources/plot_data/exon_skipping/test_plot_bases.csv", function(csv) {
-	data=csv;
-	console.log(data.length);
-	
-	
-	
-	
-	
-	
-	
-	data.forEach(function(d){
-	  	d.x = parseInt(d.x);
-	  	if (d.x>Xmax){
-		 	 Xmax=d.x;
-		  
-	 	}
-	  	d.y = parseInt(d.y);
-	  	if (d.y>Ymax){
-		 	 Ymax=d.y;
-		  
-	 	}
-	});
-	console.log("maxes");
-	
-// 9. Append the path, bind the data, and call the line generator 
-
-	
-  yScale.domain([0, Ymax]);
-  xScale.domain([0, Xmax]);
-  
-  // Draw Axis
-  gX = svg.append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + (margin.top + height) + ')')
-    .call(xAxis);
-  gY = svg.append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-    .call(yAxis);
-  
-	
-	
-	
-	
-	points = points_g.selectAll("circle").data(data);
-	points = points.enter().append("circle")
-	      .attr('cx', function(d) {
-			  var x = parseInt(d.x);
-			  if (x>Xmax){
-				  Xmax=x;
-				  
-			  }
-			  return xScale(x);
-		  })
-	      .attr('cy', function(d) {
-			  var y = parseInt(d.y);
-			  if (y>Ymax){
-				  Ymax=y;
-				  
-			  }
-			  return yScale(y);
-		  })
-	      .attr('r', 1);
-	
-		  // create scale objects
-		  
-		  
-});
-
-console.log("fu");
-console.log(data.length); 
-// Pan and zoom
-var zoom = d3.zoom()
-    .scaleExtent([0, 500])
-    .extent([[0, 0], [width, height]])
-    .on("zoom", zoomed);
-
-svg.append("rect")
-    .attr("width", width)
-    .attr("height", height)
-    .style("fill", "none")
-    .style("pointer-events", "all")
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-    .call(zoom);
-
-
-function zoomed() {
-// create new scale ojects based on event
-    var new_xScale = d3.event.transform.rescaleX(xScale);
-    var new_yScale = d3.event.transform.rescaleY(yScale);
-// update axes
-    
-	 
-	 
-	
-	
-	
-	 
-	 
-    gX.call(xAxis.scale(new_xScale));
-    gY.call(yAxis.scale(new_yScale));
-    points.data(data)
-     .attr('cx', function(d) {return new_xScale(d.x)})
-     .attr('cy', function(d) {return new_yScale(d.y)});
-	 
-	 
-	 
-	 
-}
-</script>
+	</body>
+</html>

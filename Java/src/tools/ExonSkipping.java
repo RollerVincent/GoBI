@@ -156,7 +156,7 @@ public class ExonSkipping {
 
             return out;
         }
-        return "";
+        return null;
     }
 
     public class Skip {
@@ -184,8 +184,11 @@ public class ExonSkipping {
             if(WT_prots.size()>0) {
                 out += "\t" + WT_prots.get(0).toString();
                 for (int i = 1; i < WT_prots.size(); i++) {
+
                     out += "|" + WT_prots.get(i).toString();
+
                 }
+
             }
             if(SV_prots.size()>0) {
                 out += "\t" + SV_prots.get(0).toString();
