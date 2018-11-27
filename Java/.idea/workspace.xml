@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ExonSkipping:jar" />
+      <artifact name="ReadSimulation:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -16,7 +16,120 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MainReadSimulation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/MainReadSimulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnnotationType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gtf/AnnotationType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadSimulation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tools/ReadSimulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="843">
+              <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#ReadSimulation#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#initFasta#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#initReadcounts#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#initWriters#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#closeWriters#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#simulateReads#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#getSequence#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#simulateRead#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#mutate#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#getGenomicRegion#0;class#ReadSimulation#0" expanded="false" />
+                <element signature="method#poisson#0;class#ReadSimulation#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="729">
+              <caret line="85" column="29" lean-forward="false" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
+                <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+                <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
+                <element signature="method#Writer#0;class#Parser#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegionVector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
+                <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
+                <element signature="e#1550#1551#0" expanded="true" />
+                <element signature="e#1596#1597#0" expanded="true" />
+                <element signature="method#hasNext#0;class#RegonIterator#0" expanded="false" />
+                <element signature="method#next#0;class#RegonIterator#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainExonSkipping.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/MainExonSkipping.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GtfParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/GtfParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-592">
+              <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -27,13 +140,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Region</find>
-      <find>codin</find>
-      <find>114</find>
       <find>Regions</find>
       <find>ENSP00000341887</find>
       <find>new Reg</find>
       <find>currentG</find>
+      <find>ENSG00000263160</find>
+      <find>EN</find>
+      <find>ENST00000390340</find>
+      <find>ENST00000439617</find>
+      <find>CGTTTCTACCTCC</find>
+      <find>GAGAAGGAAAAAGAAGAACCACAAGCGTTTTGAGAAAC</find>
+      <find>CCACCTCGATAATATAACACGAG</find>
+      <find>ACCTCGATAATATAACACGAGTTTGGGCCCGAA</find>
+      <find>TCACAAGGTCCTACAGATTCTACCACAATAACACCTTCAAGGCCTACCAATTTTATTATGGCAGCAACCGGTGCACAAATCCCACTTATACTCTC</find>
+      <find>GCACGCGGCGGCCGGGGCGGGACGCGGGGCCGGGCGCGGAGAAGTCGGGGCGGGCGGCAG</find>
+      <find>10487587</find>
+      <find>ENST00000376603</find>
+      <find>ACAATAAAAGTGTGAAGAGCGATTGTGAGGAACAA</find>
+      <find>AGTGATTCTTTATATGATAGCTTCTCTTCCTGTGC</find>
+      <find>CGCGCCTGGGCAACGACTTCCACACGAACAAGCGCGTGTG</find>
+      <find>TATTGCATATTGTGAATTCATTTTTATTTTGAATATAGTCCAGCACAGAGCTG</find>
+      <find>TTCTCATTATGTTACTTCTAGTGTTCACCTCTGTGATTAAAGATTCTTTGGTGAAATA</find>
+      <find>TTTTCTCATTATGTTACTTCTAGTGTTCACCTCTGTGATTAAAGATTCTTTGGTGAAATA</find>
+      <find>GTAGTC</find>
+      <find>TCCAGTAGTC</find>
+      <find>AAGCAAGCTATCTGCACCTCAAAA</find>
+      <find>TGAGGACTACCATTTTGGAGAAGGTTCTGTTTGTCTCTTTTCATTCTCTGCCCAG</find>
+      <find>TTAGAA</find>
+      <find>GAAATATGAAGAGACGCTGCAGCTGCGGTGGCGGTGGCGGCCAC</find>
+      <find>75</find>
+      <find>complementNucleotide.</find>
     </findStrings>
     <replaceStrings>
       <replace>regions</replace>
@@ -53,14 +189,16 @@
         <option value="$PROJECT_DIR$/src/gtf/Annotation.java" />
         <option value="$PROJECT_DIR$/src/gtf/CodingSequence.java" />
         <option value="$PROJECT_DIR$/src/gtf/Exon.java" />
-        <option value="$PROJECT_DIR$/src/gtf/Gene.java" />
         <option value="$PROJECT_DIR$/src/gtf/Region.java" />
-        <option value="$PROJECT_DIR$/src/gtf/RegionVector.java" />
         <option value="$PROJECT_DIR$/src/gtf/Transcript.java" />
-        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
         <option value="$PROJECT_DIR$/src/tools/ExonSkipping.java" />
-        <option value="$PROJECT_DIR$/src/parser/GtfParser.java" />
         <option value="$PROJECT_DIR$/src/main/MainExonSkipping.java" />
+        <option value="$PROJECT_DIR$/src/gtf/RegionVector.java" />
+        <option value="$PROJECT_DIR$/src/gtf/Gene.java" />
+        <option value="$PROJECT_DIR$/src/parser/GtfParser.java" />
+        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/src/tools/ReadSimulation.java" />
+        <option value="$PROJECT_DIR$/src/main/MainReadSimulation.java" />
       </list>
     </option>
   </component>
@@ -97,19 +235,6 @@
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gtf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gtf" type="462c0819:PsiDirectoryNode" />
-              <item name="RegionVector.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
@@ -161,7 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main1">
+  <component name="RunManager" selected="Application.MainReadSimulation">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -224,6 +349,25 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="MainReadSimulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="main.MainReadSimulation" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Java" />
       <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -300,15 +444,17 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Main1" />
       <item index="1" class="java.lang.String" itemvalue="Application.MainExonSkipping" />
       <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MainReadSimulation" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MainExonSkipping" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.MainReadSimulation" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MainExonSkipping" />
       </list>
     </recent_temporary>
   </component>
@@ -331,23 +477,34 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.240625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -359,7 +516,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -367,42 +523,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-          <folding>
-            <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
-            <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-            <element signature="class#RegonIterator#0" expanded="false" />
-            <element signature="method#RegonIterator#0;class#RegonIterator#0" expanded="false" />
-            <element signature="method#hasNext#0;class#RegonIterator#0" expanded="false" />
-            <element signature="method#next#0;class#RegonIterator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/Transcript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/MainExonSkipping.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="915">
@@ -427,7 +552,6 @@
           <caret line="131" column="75" lean-forward="false" selection-start-line="131" selection-start-column="75" selection-end-line="131" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#All#0;class#GtfParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -438,10 +562,8 @@
           <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#addOption#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#toString#0;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
             <element signature="method#Writer#0;class#Parser#0" expanded="false" />
           </folding>
@@ -453,7 +575,7 @@
         <state relative-caret-position="2550">
           <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -479,8 +601,8 @@
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -514,7 +636,6 @@
           <caret line="133" column="38" lean-forward="false" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#All#0;class#GtfParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -525,10 +646,8 @@
           <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#addOption#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#toString#0;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
             <element signature="method#Writer#0;class#Parser#0" expanded="false" />
           </folding>
@@ -540,7 +659,7 @@
         <state relative-caret-position="90">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -576,8 +695,8 @@
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -611,7 +730,6 @@
           <caret line="133" column="38" lean-forward="false" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#All#0;class#GtfParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -622,10 +740,8 @@
           <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#addOption#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#toString#0;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
             <element signature="method#Writer#0;class#Parser#0" expanded="false" />
           </folding>
@@ -637,7 +753,7 @@
         <state relative-caret-position="90">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -673,8 +789,8 @@
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -708,7 +824,6 @@
           <caret line="133" column="38" lean-forward="false" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#All#0;class#GtfParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -719,10 +834,8 @@
           <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#addOption#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#toString#0;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
             <element signature="method#Writer#0;class#Parser#0" expanded="false" />
           </folding>
@@ -734,7 +847,7 @@
         <state relative-caret-position="210">
           <caret line="161" column="22" lean-forward="false" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -758,13 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/AnnotationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gtf/CodingSequence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -780,56 +886,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gtf/Region.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_plot_bases.tsv" />
-    <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-          <folding>
-            <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
-            <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-            <element signature="class#RegonIterator#0" expanded="false" />
-            <element signature="method#RegonIterator#0;class#RegonIterator#0" expanded="false" />
-            <element signature="method#hasNext#0;class#RegonIterator#0" expanded="false" />
-            <element signature="method#next#0;class#RegonIterator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gtf/Transcript.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainExonSkipping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="98" column="61" lean-forward="true" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,37 +914,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/ExonSkipping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
+            <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="method#hasNext#0;class#RegonIterator#0" expanded="false" />
+            <element signature="method#next#0;class#RegonIterator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtf/AnnotationType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/GtfParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="131" column="75" lean-forward="false" selection-start-line="131" selection-start-column="75" selection-end-line="131" selection-end-column="75" />
+        <state relative-caret-position="-592">
+          <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#All#0;class#GtfParser#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainExonSkipping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+        <state relative-caret-position="729">
+          <caret line="85" column="29" lean-forward="false" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#addOption#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#toString#0;class#ArgParser#0;class#Parser#0" expanded="false" />
             <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
             <element signature="method#Writer#0;class#Parser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tools/ExonSkipping.java">
+    <entry file="file://$PROJECT_DIR$/src/manifest/read_simulation_manifest/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/ReadSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ReadSimulation#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#initFasta#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#initReadcounts#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#initWriters#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#closeWriters#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#simulateReads#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#getSequence#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#simulateRead#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#mutate#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#getGenomicRegion#0;class#ReadSimulation#0" expanded="false" />
+            <element signature="method#poisson#0;class#ReadSimulation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainReadSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -884,7 +1034,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>ExonSkipping:jar</last-edited>
+          <last-edited>ReadSimulation:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -59,6 +59,7 @@ public class GtfParser implements Iterable<Gene> {
     private boolean CheckLine(String[] data){
 
         boolean newGene = false;
+        //gene.region.end = exon.region.end;
         exon = new Exon();
         exon.region = new Region(Integer.valueOf(data[3]), Integer.valueOf(data[4]));
         Gene tmpGene = new Gene();
@@ -72,6 +73,7 @@ public class GtfParser implements Iterable<Gene> {
             gene.chromosome = data[0];
             gene.strand = data[6];
             gene.id = gene.getAttribute("gene_id");
+            //gene.region.start = exon.region.start;
             newGene = true;
 
         }if(!tmpTranscript.getAttribute("transcript_id").equals(transcript.getAttribute("transcript_id"))){

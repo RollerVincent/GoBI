@@ -34,6 +34,24 @@ public class RegionVector implements Iterable<Region> {
         return out;
     }
 
+    public Region toRegion(){
+
+
+        if(regions.size()>1){
+            if(regions.get(0).start>regions.get(1).start){
+                return new Region(regions.get(regions.size()-1).start,regions.get(0).end);
+            }else{
+                return new Region(regions.get(0).start,regions.get(regions.size()-1).end);
+            }
+        }else{
+            return regions.get(0);
+        }
+
+
+
+    }
+
+
     @Override
     public String toString(){
         String s ="[\t";
@@ -90,6 +108,8 @@ class RegonIterator implements Iterator<Region>{
         cursor+=1;
         return r;
     }
+
+
 }
 
 

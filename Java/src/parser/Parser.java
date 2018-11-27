@@ -18,6 +18,12 @@ public class Parser {
         String[] args;
         HashMap<String,boolean[]> ArgDescriptions = new HashMap<String,boolean[]>();
         HashMap<String,String> Values = new HashMap<String,String>();
+        HashMap<String,String> Info = new HashMap<String,String>();
+
+        public void addOption(String flag,boolean hasValue, boolean optional, String info){
+            addOption(flag,hasValue,optional);
+            Info.put(flag,info);
+        }
 
         public void addOption(String flag,boolean hasValue, boolean optional){
             ArgDescriptions.put(flag,new boolean[]{optional,hasValue});
@@ -60,15 +66,27 @@ public class Parser {
 
         @Override
         public String toString() {
-            String out="usage:\t";
+            String out="usage:\n";
             for(HashMap.Entry<String, boolean[]> entry : ArgDescriptions.entrySet()) {
                 String k = entry.getKey();
                 boolean[] v = entry.getValue();
-                out+="["+k;
-                if(v[1]){
-                    out+=" file";
+
+                if (v[1]) {
+                    out += "\t\trequired";
+                } else {
+                    out += "\t\toptional";
                 }
-                out+="] ";
+
+                out+="\t"+k;
+
+                String i = Info.get(k);
+
+
+                if(i!=null) {
+                    out += " ("+i+")";
+                }
+                out+="\n";
+
             }
             return out;
         }

@@ -4,6 +4,9 @@
     <root id="archive" name="ExonSkipping.jar">
       <element id="module-output" name="Java" />
       <element id="dir-copy" path="$PROJECT_DIR$/src" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/manifest/exon_skipping_manifest/META-INF/MANIFEST.MF" />
+      </element>
     </root>
   </artifact>
 </component>
