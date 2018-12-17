@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body style='margin:0;'>
+		
+		<script src="nice.js"></script>
+		
+		<div id="fufu"></div>
+		<div id="fufu2"></div>
+		
+		<script>
+		
+			
+
+				var plot = nice.plot('fufu');
+				plot.init(800,300,"","","Fragment Length Histogram",function (){
+					
+					plot.min(700,55000);
+					
+					nice.load_script('frlengths.norm',function (){
+						var d1 = plot_data;
+						nice.load_script('frlengths.histo',function (){
+							var d2 = plot_data;
+							
+							plot.dashed(d1, color = '#aaaaaa', colorOffset=8, alpha=0.8, dot="&#x25CF;", width=2);
+							plot.shape(d1.slice(0,77), color = null, colorOffset=2, alpha=0.4, dot="&#x25CF;", width=2);
+							plot.shape(d2, color = null, colorOffset=1, alpha=0.4);
+
+						});
+					});
+				});
+				
+				
+				
+				var plot2 = nice.plot('fufu2');
+				plot2.init(800,300,"","","Mutation Count Histogram",function (){
+					
+					//plot2.min(700,55000);
+					
+					nice.load_script('mutcount.pois',function (){
+						var d3 = plot_data;
+						nice.load_script('mutcount.histo',function (){
+							var d4 = plot_data;
+							
+							plot2.dashed(d3, color = '#aaaaaa', colorOffset=2, alpha=0.8, dot="&#x25CF;", width=2);
+							plot2.shape(d4, color = null, colorOffset=4, alpha=0.4);
+
+						});
+					});
+				});
+				
+				
+				
+			
+			
+		
+		</script>
+		
+		
+	</body>
+</html>

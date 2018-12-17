@@ -1,0 +1,795 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+
+<BlastOutput>
+
+  <BlastOutput_program>blastp</BlastOutput_program>
+
+  <BlastOutput_version>BLASTP 2.8.1+</BlastOutput_version>
+
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+
+  <BlastOutput_db>nr</BlastOutput_db>
+
+  <BlastOutput_query-ID>Query_245564</BlastOutput_query-ID>
+
+  <BlastOutput_query-def>Human</BlastOutput_query-def>
+
+  <BlastOutput_query-len>44</BlastOutput_query-len>
+
+  <BlastOutput_param>
+
+    <Parameters>
+
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+
+      <Parameters_expect>10</Parameters_expect>
+
+      <Parameters_gap-open>11</Parameters_gap-open>
+
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+
+      <Parameters_filter>F</Parameters_filter>
+
+    </Parameters>
+
+  </BlastOutput_param>
+
+<BlastOutput_iterations>
+
+<Iteration>
+
+  <Iteration_iter-num>1</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245564</Iteration_query-ID>
+
+  <Iteration_query-def>Human</Iteration_query-def>
+
+  <Iteration_query-len>44</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|544502060|ref|XP_005585184.1|</Hit_id>
+
+  <Hit_def>PREDICTED: thymidine kinase, cytosolic [Macaca fascicularis]</Hit_def>
+
+  <Hit_accession>XP_005585184</Hit_accession>
+
+  <Hit_len>166</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>96.2857</Hsp_bit-score>
+
+      <Hsp_score>238</Hsp_score>
+
+      <Hsp_evalue>5.99748e-24</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>44</Hsp_query-to>
+
+      <Hsp_hit-from>82</Hsp_hit-from>
+
+      <Hsp_hit-to>125</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>44</Hsp_identity>
+
+      <Hsp_positive>44</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>44</Hsp_align-len>
+
+      <Hsp_qseq>TAVCMECFREAAYTKRLGTEKEVEVIGGADKYHSVCRLCYFKKA</Hsp_qseq>
+
+      <Hsp_hseq>TAVCMECFREAAYTKRLGTEKEVEVIGGADKYHSVCRLCYFKKA</Hsp_hseq>
+
+      <Hsp_midline>TAVCMECFREAAYTKRLGTEKEVEVIGGADKYHSVCRLCYFKKA</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+<Iteration>
+
+  <Iteration_iter-num>2</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245565</Iteration_query-ID>
+
+  <Iteration_query-def>Danio Rerio</Iteration_query-def>
+
+  <Iteration_query-len>40</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|41054161|ref|NP_956126.1|</Hit_id>
+
+  <Hit_def>thymidine kinase, cytosolic [Danio rerio] &gt;gi|28277511|gb|AAH44148.1| Thymidine kinase 1, soluble [Danio rerio] &gt;gi|37780420|gb|AAO64437.1| thymidine kinase 1 [Danio rerio] &gt;gi|182891336|gb|AAI64324.1| Tk1 protein [Danio rerio]</Hit_def>
+
+  <Hit_accession>NP_956126</Hit_accession>
+
+  <Hit_len>230</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>87.8113</Hsp_bit-score>
+
+      <Hsp_score>216</Hsp_score>
+
+      <Hsp_evalue>3.72911e-20</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>40</Hsp_query-to>
+
+      <Hsp_hit-from>151</Hsp_hit-from>
+
+      <Hsp_hit-to>190</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>40</Hsp_identity>
+
+      <Hsp_positive>40</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>40</Hsp_align-len>
+
+      <Hsp_qseq>NAVCMQCFKEAAYTKRLGAEKEVEVIGGSDKYHAVCRCCY</Hsp_qseq>
+
+      <Hsp_hseq>NAVCMQCFKEAAYTKRLGAEKEVEVIGGSDKYHAVCRCCY</Hsp_hseq>
+
+      <Hsp_midline>NAVCMQCFKEAAYTKRLGAEKEVEVIGGSDKYHAVCRCCY</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+<Iteration>
+
+  <Iteration_iter-num>3</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245566</Iteration_query-ID>
+
+  <Iteration_query-def>Tryp Brucei</Iteration_query-def>
+
+  <Iteration_query-len>44</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|1048348974|pdb|5FUV|A</Hit_id>
+
+  <Hit_def>Chain A, Catalytic Domain Of Thymidine Kinase From Trypanosoma Brucei With Dthd &gt;gi|1048348975|pdb|5FUV|B Chain B, Catalytic Domain Of Thymidine Kinase From Trypanosoma Brucei With Dthd &gt;gi|1048348976|pdb|5FUW|A Chain A, Catalytic Domain Of Thymidine Kinase From Trypanosoma Brucei With Dtmp Or Dthd &gt;gi|1048348977|pdb|5FUW|B Chain B, Catalytic Domain Of Thymidine Kinase From Trypanosoma Brucei With Dtmp Or Dthd &gt;gi|1048348978|pdb|5FUX|A Chain A, Catalytic Domain Of Thymidine Kinase From Trypanosoma Brucei With Dtmp &gt;gi|1048348979|pdb|5FUX|B Chain B, Catalytic Domain Of Thymidine Kinase From Trypanosoma Brucei With Dtmp</Hit_def>
+
+  <Hit_accession>5FUV_A</Hit_accession>
+
+  <Hit_len>182</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>94.3597</Hsp_bit-score>
+
+      <Hsp_score>233</Hsp_score>
+
+      <Hsp_evalue>4.30288e-23</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>44</Hsp_query-to>
+
+      <Hsp_hit-from>136</Hsp_hit-from>
+
+      <Hsp_hit-to>179</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>44</Hsp_identity>
+
+      <Hsp_positive>44</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>44</Hsp_align-len>
+
+      <Hsp_qseq>SAVCMECHNRKASFTYRTVKSDERKLVGGSDMYMSVCRSCYETK</Hsp_qseq>
+
+      <Hsp_hseq>SAVCMECHNRKASFTYRTVKSDERKLVGGSDMYMSVCRSCYETK</Hsp_hseq>
+
+      <Hsp_midline>SAVCMECHNRKASFTYRTVKSDERKLVGGSDMYMSVCRSCYETK</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+<Iteration>
+
+  <Iteration_iter-num>4</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245567</Iteration_query-ID>
+
+  <Iteration_query-def>Mus Musc</Iteration_query-def>
+
+  <Iteration_query-len>44</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|149054921|gb|EDM06738.1|</Hit_id>
+
+  <Hit_def>rCG32815, isoform CRA_d [Rattus norvegicus]</Hit_def>
+
+  <Hit_accession>EDM06738</Hit_accession>
+
+  <Hit_len>121</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>94.3597</Hsp_bit-score>
+
+      <Hsp_score>233</Hsp_score>
+
+      <Hsp_evalue>8.92894e-24</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>44</Hsp_query-to>
+
+      <Hsp_hit-from>39</Hsp_hit-from>
+
+      <Hsp_hit-to>82</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>43</Hsp_identity>
+
+      <Hsp_positive>44</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>44</Hsp_align-len>
+
+      <Hsp_qseq>TAVCMECFREAAYTKRLGLEKEVEVIGGADKYHSVCRLCYFKKS</Hsp_qseq>
+
+      <Hsp_hseq>TAVCMECFREASYTKRLGLEKEVEVIGGADKYHSVCRLCYFKKS</Hsp_hseq>
+
+      <Hsp_midline>TAVCMECFREA+YTKRLGLEKEVEVIGGADKYHSVCRLCYFKKS</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+<Iteration>
+
+  <Iteration_iter-num>5</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245568</Iteration_query-ID>
+
+  <Iteration_query-def>Vac Virus</Iteration_query-def>
+
+  <Iteration_query-len>40</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|167412589|gb|ABZ80023.1|</Hit_id>
+
+  <Hit_def>thymidine kinase [Vaccinia virus GLV-1h68]</Hit_def>
+
+  <Hit_accession>ABZ80023</Hit_accession>
+
+  <Hit_len>81</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>86.2705</Hsp_bit-score>
+
+      <Hsp_score>212</Hsp_score>
+
+      <Hsp_evalue>3.60161e-21</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>40</Hsp_query-to>
+
+      <Hsp_hit-from>39</Hsp_hit-from>
+
+      <Hsp_hit-to>78</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>40</Hsp_identity>
+
+      <Hsp_positive>40</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>40</Hsp_align-len>
+
+      <Hsp_qseq>TAVCMKCFKEASFSKRLGEETEIEIIGGNDMYQSVCRKCY</Hsp_qseq>
+
+      <Hsp_hseq>TAVCMKCFKEASFSKRLGEETEIEIIGGNDMYQSVCRKCY</Hsp_hseq>
+
+      <Hsp_midline>TAVCMKCFKEASFSKRLGEETEIEIIGGNDMYQSVCRKCY</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+<Iteration>
+
+  <Iteration_iter-num>6</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245569</Iteration_query-ID>
+
+  <Iteration_query-def>Leishm Major</Iteration_query-def>
+
+  <Iteration_query-len>44</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|823631147|pdb|4UXH|A</Hit_id>
+
+  <Hit_def>Chain A, Leishmania Major Thymidine Kinase In Complex With Ap5dt &gt;gi|823631148|pdb|4UXH|B Chain B, Leishmania Major Thymidine Kinase In Complex With Ap5dt &gt;gi|823631149|pdb|4UXI|A Chain A, Leishmania Major Thymidine Kinase In Complex With Thymidine &gt;gi|823631150|pdb|4UXI|B Chain B, Leishmania Major Thymidine Kinase In Complex With Thymidine</Hit_def>
+
+  <Hit_accession>4UXH_A</Hit_accession>
+
+  <Hit_len>184</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>96.2857</Hsp_bit-score>
+
+      <Hsp_score>238</Hsp_score>
+
+      <Hsp_evalue>7.71459e-24</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>44</Hsp_query-to>
+
+      <Hsp_hit-from>138</Hsp_hit-from>
+
+      <Hsp_hit-to>181</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>44</Hsp_identity>
+
+      <Hsp_positive>44</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>44</Hsp_align-len>
+
+      <Hsp_qseq>TAVCMMCHEQPACFTRRTVNVEQQELIGGADMYIATCRECYSKQ</Hsp_qseq>
+
+      <Hsp_hseq>TAVCMMCHEQPACFTRRTVNVEQQELIGGADMYIATCRECYSKQ</Hsp_hseq>
+
+      <Hsp_midline>TAVCMMCHEQPACFTRRTVNVEQQELIGGADMYIATCRECYSKQ</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+<Iteration>
+
+  <Iteration_iter-num>7</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245570</Iteration_query-ID>
+
+  <Iteration_query-def>Thermot Marit</Iteration_query-def>
+
+  <Iteration_query-len>40</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|490184626|ref|WP_004083238.1|</Hit_id>
+
+  <Hit_def>thymidine kinase [Thermotoga maritima] &gt;gi|15643167|ref|NP_228211.1| thymidine kinase [Thermotoga maritima MSB8] &gt;gi|7674105|sp|Q9WYN2.1|KITH_THEMA RecName: Full=Thymidine kinase &gt;gi|145580144|pdb|2ORW|A Chain A, Thermotoga Maritima Thymidine Kinase 1 Like Enzyme In Complex With Tp4a &gt;gi|145580145|pdb|2ORW|B Chain B, Thermotoga Maritima Thymidine Kinase 1 Like Enzyme In Complex With Tp4a &gt;gi|158430368|pdb|2QPO|A Chain A, Thermotoga Maritima Thymidine Kinase In The Apo Form &gt;gi|158430369|pdb|2QPO|B Chain B, Thermotoga Maritima Thymidine Kinase In The Apo Form &gt;gi|158430370|pdb|2QPO|C Chain C, Thermotoga Maritima Thymidine Kinase In The Apo Form &gt;gi|158430371|pdb|2QPO|D Chain D, Thermotoga Maritima Thymidine Kinase In The Apo Form &gt;gi|158430375|pdb|2QQ0|A Chain A, Thymidine Kinase From Thermotoga Maritima In Complex With Thymidine + Appnhp &gt;gi|158430376|pdb|2QQ0|B Chain B, Thymidine Kinase From Thermotoga Maritima In Complex With Thymidine + Appnhp &gt;gi|158430377|pdb|2QQE|A Chain A, Thymidine Kinase From Thermotoga Maritima In Complex With Thymidine &gt;gi|158430378|pdb|2QQE|B Chain B, Thymidine Kinase From Thermotoga Maritima In Complex With Thymidine &gt;gi|4980905|gb|AAD35486.1|AE001719_12 thymidine kinase [Thermotoga maritima MSB8] &gt;gi|498539562|gb|AGL49323.1| Thymidine kinase [Thermotoga maritima MSB8] &gt;gi|568243120|gb|AHD17841.1| thymidine kinase [Thermotoga maritima MSB8] &gt;gi|811629733|gb|AKE26332.1| thymidine kinase [Thermotoga maritima] &gt;gi|811639719|gb|AKE28195.1| thymidine kinase [Thermotoga maritima MSB8] &gt;gi|811641661|gb|AKE30070.1| thymidine kinase [Thermotoga maritima]</Hit_def>
+
+  <Hit_accession>WP_004083238</Hit_accession>
+
+  <Hit_len>184</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>87.0409</Hsp_bit-score>
+
+      <Hsp_score>214</Hsp_score>
+
+      <Hsp_evalue>2.61216e-20</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>40</Hsp_query-to>
+
+      <Hsp_hit-from>138</Hsp_hit-from>
+
+      <Hsp_hit-to>177</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>40</Hsp_identity>
+
+      <Hsp_positive>40</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>40</Hsp_align-len>
+
+      <Hsp_qseq>AVCHRCGEYNATLTLKVAGGEEEIDVGGQEKYIAVCRDCY</Hsp_qseq>
+
+      <Hsp_hseq>AVCHRCGEYNATLTLKVAGGEEEIDVGGQEKYIAVCRDCY</Hsp_hseq>
+
+      <Hsp_midline>AVCHRCGEYNATLTLKVAGGEEEIDVGGQEKYIAVCRDCY</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+<Iteration>
+
+  <Iteration_iter-num>8</Iteration_iter-num>
+
+  <Iteration_query-ID>Query_245571</Iteration_query-ID>
+
+  <Iteration_query-def>Human M163</Iteration_query-def>
+
+  <Iteration_query-len>44</Iteration_query-len>
+
+<Iteration_hits>
+
+<Hit>
+
+  <Hit_num>1</Hit_num>
+
+  <Hit_id>gi|544502060|ref|XP_005585184.1|</Hit_id>
+
+  <Hit_def>PREDICTED: thymidine kinase, cytosolic [Macaca fascicularis]</Hit_def>
+
+  <Hit_accession>XP_005585184</Hit_accession>
+
+  <Hit_len>166</Hit_len>
+
+  <Hit_hsps>
+
+    <Hsp>
+
+      <Hsp_num>1</Hsp_num>
+
+      <Hsp_bit-score>94.7449</Hsp_bit-score>
+
+      <Hsp_score>234</Hsp_score>
+
+      <Hsp_evalue>2.30946e-23</Hsp_evalue>
+
+      <Hsp_query-from>1</Hsp_query-from>
+
+      <Hsp_query-to>44</Hsp_query-to>
+
+      <Hsp_hit-from>82</Hsp_hit-from>
+
+      <Hsp_hit-to>125</Hsp_hit-to>
+
+      <Hsp_query-frame>0</Hsp_query-frame>
+
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+
+      <Hsp_identity>43</Hsp_identity>
+
+      <Hsp_positive>44</Hsp_positive>
+
+      <Hsp_gaps>0</Hsp_gaps>
+
+      <Hsp_align-len>44</Hsp_align-len>
+
+      <Hsp_qseq>TAVCMECFREAAYSKRLGTEKEVEVIGGADKYHSVCRLCYFKKA</Hsp_qseq>
+
+      <Hsp_hseq>TAVCMECFREAAYTKRLGTEKEVEVIGGADKYHSVCRLCYFKKA</Hsp_hseq>
+
+      <Hsp_midline>TAVCMECFREAAY+KRLGTEKEVEVIGGADKYHSVCRLCYFKKA</Hsp_midline>
+
+    </Hsp>
+
+  </Hit_hsps>
+
+</Hit>
+
+</Iteration_hits>
+
+  <Iteration_stat>
+
+    <Statistics>
+
+      <Statistics_db-num>178963785</Statistics_db-num>
+
+      <Statistics_db-len>953502260</Statistics_db-len>
+
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+
+      <Statistics_eff-space>0</Statistics_eff-space>
+
+      <Statistics_kappa>0.041</Statistics_kappa>
+
+      <Statistics_lambda>0.267</Statistics_lambda>
+
+      <Statistics_entropy>0.14</Statistics_entropy>
+
+    </Statistics>
+
+  </Iteration_stat>
+
+</Iteration>
+
+</BlastOutput_iterations>
+
+</BlastOutput>

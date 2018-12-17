@@ -7,7 +7,7 @@ import java.util.List;
 public class RegionVector implements Iterable<Region> {
 
     public List<Region> regions = new ArrayList<Region>();
-
+    public boolean turn = false;
 
     public int length(){
         return regions.size();
@@ -34,19 +34,30 @@ public class RegionVector implements Iterable<Region> {
         return out;
     }
 
+    public RegionVector inverse_clamped(){
+        RegionVector out = new RegionVector();
+        Iterator<Region> itr = this.iterator();
+        if(itr.hasNext()) {
+            Region prev = itr.next();
+            out.add(new Region(prev.start,prev.start));
+            while (itr.hasNext()) {
+                Region element = itr.next();
+                Region r = new Region(prev.end+1,element.start-1);
+                out.add(r);
+                prev=element;
+            }
+            out.add(new Region(prev.end,prev.end));
+        }
+        return out;
+    }
+
     public Region toRegion(){
 
-
-        if(regions.size()>1){
-            if(regions.get(0).start>regions.get(1).start){
-                return new Region(regions.get(regions.size()-1).start,regions.get(0).end);
-            }else{
-                return new Region(regions.get(0).start,regions.get(regions.size()-1).end);
-            }
+        if(!turn){
+            return new Region(regions.get(0).start,regions.get(regions.size()-1).end);
         }else{
-            return regions.get(0);
+            return new Region(regions.get(regions.size()-1).start,regions.get(0).end);
         }
-
 
 
     }
@@ -74,26 +85,17 @@ class RegonIterator implements Iterator<Region>{
     RegionVector v;
     int cursor;
     boolean turn;
-
+    int size;
 
     RegonIterator(RegionVector v){
         this.v = v;
         cursor = 0;
-        if(v.regions.size()==0) {
-            cursor=-1;
-        }
-        if(v.regions.size()>1){
-            if(v.regions.get(0).start>v.regions.get(1).start){
-                turn=true;
-            }
-        }
+        turn = v.turn;
+        size = v.regions.size();
     }
 
     @Override
     public boolean hasNext() {
-        if(cursor==-1){
-            return false;
-        }
         return cursor != v.regions.size();
     }
 
@@ -103,7 +105,7 @@ class RegonIterator implements Iterator<Region>{
         if(!turn){
             r=v.regions.get(cursor);
         }else{
-            r=v.regions.get(v.regions.size()-cursor-1);
+            r=v.regions.get(size-cursor-1);
         }
         cursor+=1;
         return r;
