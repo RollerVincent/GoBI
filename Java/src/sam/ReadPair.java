@@ -1,12 +1,10 @@
 package sam;
 
-import gtf.Forestxxx;
-import gtf.Gene;
-import gtf.Region;
-import gtf.RegionVector;
+import gtf.*;
 import htsjdk.samtools.AlignmentBlock;
 import htsjdk.samtools.SAMRecord;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReadPair {
@@ -58,15 +56,15 @@ public class ReadPair {
 
     public void updateRegions(){
 
-/*
-        int s;
+
+      /*  int s;
         int e;
         int lastEnd = -1;
         int i=-1;
         fwv = new RegionVector();
         for(AlignmentBlock ab : first.getAlignmentBlocks()){
             s = ab.getReferenceStart();
-            e = s + ab.getLength();
+            e = s + ab.getLength()-1;
             if(s==lastEnd){
                 fwv.get(i).end = e;
             }else{
@@ -82,7 +80,7 @@ public class ReadPair {
         rwv = new RegionVector();
         for(AlignmentBlock ab : second.getAlignmentBlocks()){
             s = ab.getReferenceStart();
-            e = s + ab.getLength();
+            e = s + ab.getLength()-1;
             if(s==lastEnd){
                 rwv.get(i).end = e;
             }else{
@@ -105,17 +103,16 @@ public class ReadPair {
         fwv = new RegionVector();
         for(AlignmentBlock ab : first.getAlignmentBlocks()){
             s = ab.getReferenceStart();
-            fwv.add(new Region(s,s+ab.getLength()));
+            fwv.add(new Region(s,s+ab.getLength()-1));
         }
         rwv = new RegionVector();
         for(AlignmentBlock ab : second.getAlignmentBlocks()){
             s = ab.getReferenceStart();
-            rwv.add(new Region(s,s+ab.getLength()));
+            rwv.add(new Region(s,s+ab.getLength()-1));
         }
 
         fwl = fwv.length();
         rwl = rwv.length();
-
 
     }
 
@@ -142,7 +139,7 @@ public class ReadPair {
         while (i < al-1 && j<bl) {
             int s = a.get(i).end+1;
             int e = a.get(i+1).start-1;
-            if(s-1<=e) {
+            if(s<=e) {
                 Region r = b.get(j);
                 if (r.end < s) {
                     j += 1;
@@ -236,4 +233,49 @@ public class ReadPair {
 
     }
 
+    public  String matchedTranscripts(List<Gene> genes){
+        List<String> matches = new ArrayList<>();
+        RegionVector cut;
+        List<String> transcripts;
+        for(Gene g : genes){
+            transcripts = new ArrayList<>();
+            for(Transcript t : g.transcripts){
+
+                cut = t.regionVector.cut(fwv.toRegion());
+                if(cut.equals(fwv)){
+                    cut = t.regionVector.cut(rwv.toRegion());
+                    if(cut.equals(rwv)){
+                       // System.out.println(readName+"    "+g.id+"      "+t.id);
+                        transcripts.add(t.id);
+                       // System.out.println(t.regionVector);
+                       // System.out.println(fwv);
+                        //System.out.println(rwv);
+                        //System.out.println();
+                    }
+                }
+
+
+              //  System.out.println(cut);
+
+            }
+            if(transcripts.size()!=0){
+                String s = g.id+","+g.getAttribute("gene_biotype")+":";
+                for (int i = 0; i < transcripts.size()-1; i++) {
+                    s+=transcripts.get(i)+",";
+                }
+                s+=transcripts.get(transcripts.size()-1);
+                matches.add(s);
+            }
+        }
+        if(matches.size()!=0){
+            String s="";
+            for (int i = 0; i < matches.size() - 1; i++) {
+                s+=matches.get(i)+"|";
+            }
+            s+=matches.get(matches.size()-1);
+            return s;
+        }
+
+        return null;
+    }
 }

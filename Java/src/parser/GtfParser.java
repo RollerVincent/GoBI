@@ -66,7 +66,6 @@ public class GtfParser implements Iterable<Gene> {
         return a;
     }
 
-
     public void fillForest(Forest f){
 
         for(Gene g : this){
@@ -92,6 +91,7 @@ public class GtfParser implements Iterable<Gene> {
             exon.id = gene.id+"_"+exon.region.start+":"+exon.region.end;
         }
 
+        gene.attributes = tmpGene.attributes;
         gene.chromosome = data[0];
         gene.strand = data[6];
         if(gene.strand.charAt(0)=='-'){
@@ -100,7 +100,6 @@ public class GtfParser implements Iterable<Gene> {
             currentNegativeStrand = false;
         }
 
-        transcript.regionVector.turn = currentNegativeStrand;
         transcript.regionVector.add(exon.region);
         gene.transcripts.add(transcript);
         transcript.exons.add(exon);
@@ -110,7 +109,6 @@ public class GtfParser implements Iterable<Gene> {
     private void loadTranscript(Transcript tmp){
         transcript = tmp;
         transcript.id = transcript.getAttribute("transcript_id");
-        transcript.regionVector.turn = currentNegativeStrand;
         gene.transcripts.add(transcript);
     }
 
@@ -130,9 +128,6 @@ public class GtfParser implements Iterable<Gene> {
         transcript.codingSequence = codingSequence;
         gene.codingTranscripts.add(transcript);
     }
-
-
-
 
     private boolean CheckLine(String[] data){
 
@@ -162,7 +157,6 @@ public class GtfParser implements Iterable<Gene> {
         }if(!tmpTranscript.getAttribute("transcript_id").equals(transcript.getAttribute("transcript_id"))){
             transcript = tmpTranscript;
             transcript.id = transcript.getAttribute("transcript_id");
-            transcript.regionVector.turn = currentNegativeStrand;
             gene.transcripts.add(transcript);
         }
 
@@ -202,12 +196,18 @@ public class GtfParser implements Iterable<Gene> {
             if(exon.id==null){
                 exon.id = gene.id+"_"+exon.region.start+":"+exon.region.end;
             }
-            transcript.exons.add(exon);
-            transcript.regionVector.add(exon.region);
+            if(currentNegativeStrand) {
+                transcript.exons.add(0, exon);
+                transcript.regionVector.add(0,exon.region);
+
+            }else {
+                transcript.exons.add(exon);
+                transcript.regionVector.add(exon.region);
+
+            }
             return true;
         }
     }
-
 
     @Override
     public Iterator<Gene> iterator() {

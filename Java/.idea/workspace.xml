@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainReadAnnotation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainReadAnnotation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/MainReadAnnotation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-433">
-              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="-403">
+              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,8 +32,8 @@
       <file leaf-file-name="ReadAnnotation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tools/ReadAnnotation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="101" column="12" lean-forward="false" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
+            <state relative-caret-position="190">
+              <caret line="109" column="38" lean-forward="true" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ReadAnnotation#0;class#ReadAnnotation#0" expanded="false" />
@@ -57,8 +57,8 @@
       <file leaf-file-name="StrandedForest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="55" column="118" lean-forward="false" selection-start-line="55" selection-start-column="118" selection-end-line="55" selection-end-column="118" />
+            <state relative-caret-position="112">
+              <caret line="55" column="103" lean-forward="true" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
               <folding>
                 <element signature="method#StrandedForest#0;class#StrandedForest#0" expanded="false" />
                 <element signature="method#getNeighbourDistance#0;class#StrandedForest#0" expanded="false" />
@@ -71,8 +71,8 @@
       <file leaf-file-name="UnStrandedForest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/UnStrandedForest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="69" column="27" lean-forward="false" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+            <state relative-caret-position="225">
+              <caret line="29" column="100" lean-forward="false" selection-start-line="29" selection-start-column="100" selection-end-line="29" selection-end-column="100" />
               <folding>
                 <element signature="method#add#0;class#UnStrandedForest#0" expanded="false" />
                 <element signature="method#hasContainedGene#0;class#UnStrandedForest#0" expanded="false" />
@@ -84,23 +84,21 @@
       <file leaf-file-name="RegionVector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="502">
+              <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
               <folding>
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
                 <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
                 <element signature="method#inverse_clamped#0;class#RegionVector#0" expanded="false" />
+                <element signature="method#cut#0;class#RegionVector#0" expanded="false" />
                 <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
+                <element signature="e#3155#3156#0" expanded="true" />
+                <element signature="e#3202#3203#0" expanded="true" />
+                <element signature="class#RegionIterator#0" expanded="false" />
+                <element signature="method#RegionIterator#0;class#RegionIterator#0" expanded="false" />
+                <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntervalTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/augmentedTree/IntervalTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3412">
-              <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -108,7 +106,7 @@
       <file leaf-file-name="Gene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
+            <state relative-caret-position="500">
               <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding>
                 <element signature="e#797#798#0" expanded="true" />
@@ -120,15 +118,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Transcript.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gtf/Transcript.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ReadPair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sam/ReadPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="296">
+              <caret line="261" column="57" lean-forward="false" selection-start-line="261" selection-start-column="57" selection-end-line="261" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateMisMatchCount#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#updateClipping#0;class#ReadPair#0" expanded="false" />
+                <element signature="method#updateBounds#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#check_inconsistency#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#inconsistent#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#mergeRegions#0;class#ReadPair#0" expanded="false" />
@@ -137,19 +146,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GtfParser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GtfParser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parser/GtfParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="191" column="16" lean-forward="false" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
+            <state relative-caret-position="510">
+              <caret line="209" column="5" lean-forward="false" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
               <folding>
+                <element signature="method#GtfParser#0;class#GtfParser#0" expanded="false" />
                 <element signature="method#All#0;class#GtfParser#0" expanded="false" />
+                <element signature="method#fillForest#0;class#GtfParser#0" expanded="false" />
                 <element signature="method#loadGene#0;class#GtfParser#0" expanded="false" />
                 <element signature="method#loadTranscript#0;class#GtfParser#0" expanded="false" />
                 <element signature="method#loadCodingSequence#0;class#GtfParser#0" expanded="false" />
                 <element signature="method#CheckLine#0;class#GtfParser#0" expanded="false" />
+                <element signature="method#processLine#0;class#GtfParser#0" expanded="false" />
                 <element signature="method#iterator#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#next#0;class#6862:8163" expanded="false" />
+                <element signature="method#next#0;class#6904:8205" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -167,11 +179,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>46363183</find>
-      <find>HG185_PATCH</find>
-      <find>1380119</find>
-      <find>5388554</find>
-      <find>3625054</find>
       <find>1150622</find>
       <find>5705922</find>
       <find>fwS</find>
@@ -186,7 +193,6 @@
       <find>3577118</find>
       <find>477428</find>
       <find>1321709</find>
-      <find>sense:t</find>
       <find>sense:tr</find>
       <find>true</find>
       <find>19668975</find>
@@ -196,7 +202,13 @@
       <find>se:falsef</find>
       <find>5230529</find>
       <find>47490846</find>
+      <find>sense:t</find>
+      <find>13561885</find>
+      <find>1233524</find>
       <find>System</find>
+      <find>4749599</find>
+      <find>|</find>
+      <find>ENSG00000250575,pseudogene:ENST00000514436|ENSG00000237094,lincRNA:ENST00000425496</find>
     </findStrings>
     <replaceStrings>
       <replace>regions</replace>
@@ -223,16 +235,16 @@
         <option value="$PROJECT_DIR$/src/parser/Parser.java" />
         <option value="$PROJECT_DIR$/src/tools/ReadSimulation.java" />
         <option value="$PROJECT_DIR$/src/main/MainReadSimulation.java" />
-        <option value="$PROJECT_DIR$/src/gtf/RegionVector.java" />
         <option value="$PROJECT_DIR$/src/gtf/Forest.java" />
-        <option value="$PROJECT_DIR$/src/parser/GtfParser.java" />
         <option value="$PROJECT_DIR$/src/augmentedTree/forest/Forest.java" />
+        <option value="$PROJECT_DIR$/src/gtf/Gene.java" />
+        <option value="$PROJECT_DIR$/src/gtf/RegionVector.java" />
         <option value="$PROJECT_DIR$/src/augmentedTree/forest/UnStrandedForest.java" />
+        <option value="$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java" />
+        <option value="$PROJECT_DIR$/src/main/MainReadAnnotation.java" />
         <option value="$PROJECT_DIR$/src/tools/ReadAnnotation.java" />
         <option value="$PROJECT_DIR$/src/sam/ReadPair.java" />
-        <option value="$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java" />
-        <option value="$PROJECT_DIR$/src/gtf/Gene.java" />
-        <option value="$PROJECT_DIR$/src/main/MainReadAnnotation.java" />
+        <option value="$PROJECT_DIR$/src/parser/GtfParser.java" />
       </list>
     </option>
   </component>
@@ -285,7 +297,20 @@
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gtf" type="462c0819:PsiDirectoryNode" />
+              <item name="RegionVector.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
@@ -574,14 +599,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31911966" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19628432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17469051" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1098546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -690,10 +715,10 @@
           <folding>
             <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
             <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-            <element signature="e#2003#2004#0" expanded="false" />
-            <element signature="e#2049#2050#0" expanded="false" />
-            <element signature="method#hasNext#0;class#RegonIterator#0" expanded="false" />
-            <element signature="method#next#0;class#RegonIterator#0" expanded="false" />
+            <element signature="e#3155#3156#0" expanded="true" />
+            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="method#hasNext#0;class#RegionIterator#0" expanded="false" />
+            <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -784,10 +809,10 @@
           <folding>
             <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
             <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-            <element signature="e#2003#2004#0" expanded="false" />
-            <element signature="e#2049#2050#0" expanded="false" />
-            <element signature="method#hasNext#0;class#RegonIterator#0" expanded="false" />
-            <element signature="method#next#0;class#RegonIterator#0" expanded="false" />
+            <element signature="e#3155#3156#0" expanded="true" />
+            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="method#hasNext#0;class#RegionIterator#0" expanded="false" />
+            <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -979,14 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/Transcript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gtf/Forestxxx.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -994,34 +1011,6 @@
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="method#getIntersecting#0;class#Forestxxx#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
-            <element signature="method#inverse_clamped#0;class#RegionVector#0" expanded="false" />
-            <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/GtfParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="191" column="16" lean-forward="false" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
-          <folding>
-            <element signature="method#All#0;class#GtfParser#0" expanded="false" />
-            <element signature="method#loadGene#0;class#GtfParser#0" expanded="false" />
-            <element signature="method#loadTranscript#0;class#GtfParser#0" expanded="false" />
-            <element signature="method#loadCodingSequence#0;class#GtfParser#0" expanded="false" />
-            <element signature="method#CheckLine#0;class#GtfParser#0" expanded="false" />
-            <element signature="method#iterator#0;class#GtfParser#0" expanded="false" />
-            <element signature="method#next#0;class#6862:8163" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1042,10 +1031,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtf/Transcript.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+          <folding>
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
+            <element signature="method#inverse_clamped#0;class#RegionVector#0" expanded="false" />
+            <element signature="method#cut#0;class#RegionVector#0" expanded="false" />
+            <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
+            <element signature="e#3155#3156#0" expanded="true" />
+            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="class#RegionIterator#0" expanded="false" />
+            <element signature="method#RegionIterator#0;class#RegionIterator#0" expanded="false" />
+            <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/UnStrandedForest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="69" column="27" lean-forward="false" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+        <state relative-caret-position="225">
+          <caret line="29" column="100" lean-forward="false" selection-start-line="29" selection-start-column="100" selection-end-line="29" selection-end-column="100" />
           <folding>
             <element signature="method#add#0;class#UnStrandedForest#0" expanded="false" />
             <element signature="method#hasContainedGene#0;class#UnStrandedForest#0" expanded="false" />
@@ -1053,10 +1083,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="55" column="103" lean-forward="true" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
+          <folding>
+            <element signature="method#StrandedForest#0;class#StrandedForest#0" expanded="false" />
+            <element signature="method#getNeighbourDistance#0;class#StrandedForest#0" expanded="false" />
+            <element signature="method#getAntisense#0;class#StrandedForest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainReadAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tools/ReadAnnotation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="101" column="12" lean-forward="false" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
+        <state relative-caret-position="190">
+          <caret line="109" column="38" lean-forward="true" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadAnnotation#0;class#ReadAnnotation#0" expanded="false" />
@@ -1068,12 +1120,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sam/ReadPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="296">
+          <caret line="261" column="57" lean-forward="false" selection-start-line="261" selection-start-column="57" selection-end-line="261" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updateMisMatchCount#0;class#ReadPair#0" expanded="false" />
             <element signature="method#updateClipping#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#updateBounds#0;class#ReadPair#0" expanded="false" />
             <element signature="method#check_inconsistency#0;class#ReadPair#0" expanded="false" />
             <element signature="method#inconsistent#0;class#ReadPair#0" expanded="false" />
             <element signature="method#mergeRegions#0;class#ReadPair#0" expanded="false" />
@@ -1081,37 +1134,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java">
+    <entry file="file://$PROJECT_DIR$/src/parser/GtfParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="55" column="118" lean-forward="false" selection-start-line="55" selection-start-column="118" selection-end-line="55" selection-end-column="118" />
+        <state relative-caret-position="510">
+          <caret line="209" column="5" lean-forward="false" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
           <folding>
-            <element signature="method#StrandedForest#0;class#StrandedForest#0" expanded="false" />
-            <element signature="method#getNeighbourDistance#0;class#StrandedForest#0" expanded="false" />
-            <element signature="method#getAntisense#0;class#StrandedForest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainReadAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-433">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#GtfParser#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#All#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#fillForest#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#loadGene#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#loadTranscript#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#loadCodingSequence#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#CheckLine#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#processLine#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#iterator#0;class#GtfParser#0" expanded="false" />
+            <element signature="method#next#0;class#6904:8205" expanded="false" />
           </folding>
         </state>
       </provider>

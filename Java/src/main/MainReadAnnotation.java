@@ -17,14 +17,14 @@ public class MainReadAnnotation {
     public static void main(String args[])
     {
 
-        boolean frstrand = true;
-        boolean strandunspecific = true;
+        boolean frstrand = false;
+        boolean strandunspecific = false;
         long s = System.nanoTime();
 
 
-        GtfParser parser = new GtfParser("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/Saccharomyces_cerevisiae.R64-1-1.75.gtf");
-        //GtfParser parser = new GtfParser("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/Homo_sapiens.GRCh37.75.gtf");
-        
+        //GtfParser parser = new GtfParser("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/Saccharomyces_cerevisiae.R64-1-1.75.gtf");
+        GtfParser parser = new GtfParser("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/Homo_sapiens.GRCh37.75.gtf");
+
 
 
         Forest forest;
@@ -43,8 +43,8 @@ public class MainReadAnnotation {
 
 
         //ReadAnnotation reads = new ReadAnnotation("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/complete_bams/hes_star.bam");
-        //ReadAnnotation reads = new ReadAnnotation("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/h.sp.8.bam");
-        ReadAnnotation reads = new ReadAnnotation("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/y.ns.5.bam");
+        ReadAnnotation reads = new ReadAnnotation("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/h.sn.1.bam");
+        //ReadAnnotation reads = new ReadAnnotation("/Users/vincentroller/Home/Studies/genprakt/BamFeatures/y.ns.5.bam");
         ReadPair pair;
         List<Gene> genes;
 
@@ -64,16 +64,17 @@ public class MainReadAnnotation {
 
 
 
-
+            String result;
             pair.updateBounds();
             genes = forest.getOuterGenes(pair);
             if (genes.size() == 0) {
                 if (!forest.hasContainedGene(pair)) {
-                    System.out.println(reads.processPair(pair,forest.getNeighbourDistance(pair),forest.getAntisense(pair)));
+                    result = reads.processPair(pair,forest.getNeighbourDistance(pair),forest.getAntisense(pair));
                     total+=1;
                 }
             }else{
-                System.out.println(reads.processPair(pair,genes));
+                result = reads.processPair(pair,genes);
+
                 total+=1;
             }
 

@@ -2,6 +2,8 @@ package tools;
 
 
 import gtf.Gene;
+import gtf.RegionVector;
+import gtf.Transcript;
 import htsjdk.samtools.*;
 import parser.Parser;
 import sam.ReadPair;
@@ -9,6 +11,7 @@ import sam.ReadPair;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -102,7 +105,12 @@ public class ReadAnnotation {
             pair.mergeRegions();
             pair.updateMisMatchCount();
             pair.updateClipping();
-          //  pair.updateSplitCount();
+            String m = pair.matchedTranscripts(genes);
+            if(m!=null){
+                System.out.println(m);
+            }
+
+
             return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:";
         }else{
             splitincons+=1;
@@ -118,7 +126,6 @@ public class ReadAnnotation {
             pair.mergeRegions();
             pair.updateMisMatchCount();
             pair.updateClipping();
-           // pair.updateSplitCount();
             gcount0+=1;
             return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:0\tgdist:"+gdist+"\tantisense:"+antisense;
 
