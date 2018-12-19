@@ -19,40 +19,29 @@ public class ReadAnnotation {
 
 
     public ReadAnnotation(String path){
-
         pairs = new HashMap<>();
-
-        File bamFile = new File(path);
-        samReader = SamReaderFactory.makeDefault().validationStringency(ValidationStringency.SILENT).open(bamFile);
+        samReader = SamReaderFactory.makeDefault().validationStringency(ValidationStringency.SILENT).open(new File(path));
         records = samReader.iterator();
-
-
-
-
     }
 
-    public ReadPair nextPair() {
 
+    public ReadPair nextPair() {
         SAMRecord sr;
         String ref;
         String readName;
         boolean firstOfPair;
         ReadPair p;
         ReadPair newPair;
-
         while (records.hasNext()) {
-
             sr = records.next();
 
             if(!((sr.getReadNegativeStrandFlag()==sr.getMateNegativeStrandFlag()) | !sr.getReadPairedFlag() | sr.getReadUnmappedFlag() | sr.getMateUnmappedFlag() | sr.getNotPrimaryAlignmentFlag())) {  // Preliminary ignoring conditions
-
-
 
                 readName = sr.getReadName();
                 firstOfPair = sr.getFirstOfPairFlag();
                 ref = sr.getReferenceName();
 
-                if(!ref.equals(currentReference)) { //TODO: optimize ref.equals (per pair only ?)
+                if(!ref.equals(currentReference)) {
                     currentReference = ref;
                     pairs = new HashMap<>();
                 }
@@ -60,7 +49,7 @@ public class ReadAnnotation {
                 p = pairs.get(readName);
                 if (p != null) {
                     if (firstOfPair) {
-                        p.first = sr;
+                        p.first = sr; //TODO: left and right instead of first and second
                     } else {
                         p.second = sr;
                     }
@@ -79,21 +68,16 @@ public class ReadAnnotation {
             }
 
         }
-
-
-
         return null;
     }
 
+
     public int splitincons = 0;
     public int gcount0 = 0;
-
-
     public String processPair(ReadPair pair, List<Gene> genes){
-
         pair.updateRegions();
         if(!pair.inconsistent()){
-            pair.mergeRegions();
+            pair.mergeRegions(); //TODO: merge only after no transcript matched, needs nsplit method
             pair.updateMisMatchCount();
             pair.updateClipping();
             String m = pair.matchedTranscripts(genes);
@@ -103,18 +87,15 @@ public class ReadAnnotation {
                     m = pair.intronicGenes(genes);
                 }
             }
-
-
             return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:"+pair.gcount+"\t"+m;
         }else{
             splitincons+=1;
             return pair.readName+"\tsplit-inconsistent:true";
         }
-
     }
 
-    public String processPair(ReadPair pair, int gdist, boolean antisense){
 
+    public String processPair(ReadPair pair, int gdist, boolean antisense){
         pair.updateRegions();
         if(!pair.inconsistent()){
             pair.mergeRegions();
@@ -122,13 +103,12 @@ public class ReadAnnotation {
             pair.updateClipping();
             gcount0+=1;
             return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:0\tgdist:"+gdist+"\tantisense:"+antisense;
-
         }else{
             splitincons+=1;
             return pair.readName+"\tsplit-inconsistent:true";
         }
-
     }
+
 
     public void close(){
         records.close();

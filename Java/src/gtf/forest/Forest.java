@@ -1,4 +1,4 @@
-package augmentedTree.forest;
+package gtf.forest;
 
 import gtf.Gene;
 import sam.ReadPair;

@@ -11,12 +11,10 @@ public class Parser {
 
 
     public static void drawRegionVectors(List<RegionVector> regionVectors, List<String> colors,String path, int width){
-
         HashMap<Integer,String> colormap = new HashMap<>();
         for (int i = 0; i < colors.size(); i++) {
             colormap.put(i,colors.get(i));
         }
-
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for (RegionVector rv :regionVectors){
@@ -65,6 +63,7 @@ public class Parser {
             e.printStackTrace();
         }
     }
+
 
     public static ArgParser ArgParser(String[] args){
         ArgParser a = new ArgParser();
@@ -149,6 +148,7 @@ public class Parser {
         }
     }
 
+
     public static void StringToFile(String string,String path){
         try {
 
@@ -159,6 +159,7 @@ public class Parser {
             e.printStackTrace();
         }
     }
+
 
     public static BufferedWriter Writer(String path){
         try {

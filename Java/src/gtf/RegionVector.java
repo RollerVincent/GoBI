@@ -8,11 +8,15 @@ public class RegionVector implements Iterable<Region> {
 
     public List<Region> regions = new ArrayList<Region>();
 
+
+
     public int length(){
         return regions.size();
     }
 
+
     public void add(Region r){ regions.add(r); }
+
 
     public void add(int index, Region r){ regions.add(index, r); }
 
@@ -20,6 +24,7 @@ public class RegionVector implements Iterable<Region> {
     public Region get(int index){
         return regions.get(index);
     }
+
 
     public RegionVector inverse(){
         RegionVector out = new RegionVector();
@@ -35,6 +40,7 @@ public class RegionVector implements Iterable<Region> {
         }
         return out;
     }
+
 
     public RegionVector inverse_clamped(){
         RegionVector out = new RegionVector();
@@ -53,9 +59,11 @@ public class RegionVector implements Iterable<Region> {
         return out;
     }
 
+
     public Region toRegion(){
         return new Region(regions.get(0).start,regions.get(regions.size()-1).end);
     }
+
 
     public RegionVector cut(Region region){
         int s = region.start;
@@ -85,6 +93,7 @@ public class RegionVector implements Iterable<Region> {
         return out;
     }
 
+
     public boolean equals(RegionVector o){
         if(o.length()!=length()){
             return false;
@@ -104,6 +113,7 @@ public class RegionVector implements Iterable<Region> {
         return true;
     }
 
+
     @Override
     public String toString(){
         String s ="[\t";
@@ -114,6 +124,7 @@ public class RegionVector implements Iterable<Region> {
         }
         return s+"]";
     }
+
 
     @Override
     public Iterator<Region> iterator() {

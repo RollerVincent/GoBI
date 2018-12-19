@@ -1,4 +1,4 @@
-package augmentedTree.forest;
+package gtf.forest;
 
 import augmentedTree.IntervalTree;
 import gtf.Gene;
@@ -12,6 +12,8 @@ public class UnStrandedForest implements Forest {
     private HashMap<String, IntervalTree<Gene>> content = new HashMap<>();
     private List<Gene> genes;
 
+
+
     @Override
     public void add(Gene g) {
         IntervalTree it = content.get(g.chromosome);
@@ -24,6 +26,7 @@ public class UnStrandedForest implements Forest {
         }
     }
 
+
     @Override
     public List<Gene> getOuterGenes(ReadPair p) {
         genes = new ArrayList<>();
@@ -31,12 +34,14 @@ public class UnStrandedForest implements Forest {
         return genes;
     }
 
+
     @Override
     public boolean hasContainedGene(ReadPair p) {
         genes = new ArrayList<>();
         content.get(p.first.getReferenceName()).getIntervalsSpannedBy(p.alignmentStart,p.alignmentEnd,genes);
         return genes.size()>0;
     }
+
 
     @Override
     public int getNeighbourDistance(ReadPair p) {
@@ -71,6 +76,7 @@ public class UnStrandedForest implements Forest {
             }
         }
     }
+
 
     @Override
     public boolean getAntisense(ReadPair p) {

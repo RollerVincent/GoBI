@@ -4,9 +4,9 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.List;
 
-import augmentedTree.forest.Forest;
-import augmentedTree.forest.StrandedForest;
-import augmentedTree.forest.UnStrandedForest;
+import gtf.forest.Forest;
+import gtf.forest.StrandedForest;
+import gtf.forest.UnStrandedForest;
 import gtf.Gene;
 import parser.GtfParser;
 import parser.Parser;

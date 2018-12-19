@@ -1,4 +1,4 @@
-package augmentedTree.forest;
+package gtf.forest;
 
 import augmentedTree.IntervalTree;
 import gtf.Gene;
@@ -15,6 +15,8 @@ public class StrandedForest implements Forest {
     private int scndstrand;
     private int firstStrandIndex;
 
+
+
     public StrandedForest(boolean frstrand){
         if (frstrand){
             firststrand = 0;
@@ -24,6 +26,7 @@ public class StrandedForest implements Forest {
             scndstrand = 0;
         }
     }
+
 
     @Override
     public void add(Gene g){
@@ -45,6 +48,7 @@ public class StrandedForest implements Forest {
         }
     }
 
+
     @Override
     public List<Gene> getOuterGenes(ReadPair p) {
         if(!p.first.getReadNegativeStrandFlag()){
@@ -57,12 +61,14 @@ public class StrandedForest implements Forest {
         return genes;
     }
 
+
     @Override
     public boolean hasContainedGene(ReadPair p) {
         genes = new ArrayList<>();
         content.get(p.first.getReferenceName())[firstStrandIndex].getIntervalsSpannedBy(p.alignmentStart,p.alignmentEnd,genes);
         return genes.size()>0;
     }
+
 
     @Override
     public int getNeighbourDistance(ReadPair p) {
@@ -97,6 +103,7 @@ public class StrandedForest implements Forest {
             }
         }
     }
+
 
     @Override
     public boolean getAntisense(ReadPair p) {

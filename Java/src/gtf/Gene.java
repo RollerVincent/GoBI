@@ -9,30 +9,24 @@ public class Gene extends AnnotationType implements Interval {
 
     public List<Transcript> transcripts = new ArrayList<Transcript>();
     public List<Transcript> codingTranscripts = new ArrayList<Transcript>();
-    public List<Exon> exons = new ArrayList<Exon>();
     public String chromosome;
     public String strand = null;
 
     public void setRegion(){
-        int s = transcripts.get(0).regionVector.toRegion().start;
-        int e = s;
-        int c;
-        for(Transcript t : transcripts) {
-            c = t.regionVector.toRegion().end;
-            if(c>e){
-                e=c;
+        region = transcripts.get(0).regionVector.toRegion();
+        int e;
+        for (int i = 1; i < transcripts.size(); i++) {
+            e = transcripts.get(i).regionVector.toRegion().end;
+            if(e>region.end){
+                region.end=e;
             }
         }
-        region = new Region(s,e);
     }
 
-    public RegionVector mergedTranscripts(){
-
+    public RegionVector mergedTranscripts(){ //TODO: in gtf parser, treemap with exons per gene
         RegionVector out = transcripts.get(0).regionVector;
-
         RegionVector a;
         RegionVector b;
-
         for (int t = 1; t < transcripts.size(); t++) {
             a=out;
             out = new RegionVector();
@@ -45,19 +39,14 @@ public class Gene extends AnnotationType implements Interval {
             Region A = null;
             Region B = null;
             boolean newPiv = true;
-
             while(i<a.length() && j<b.length()){
-
                 A = a.get(i);
                 B = b.get(j);
-
                 if(newPiv){
                     if(A.start<B.start){
-
                         mod = 0;
                         s = A.start;
                     }else{
-
                         mod = 1;
                         s = B.start;
                     }
@@ -105,7 +94,6 @@ public class Gene extends AnnotationType implements Interval {
                 }
             }
         }
-
         return out;
     }
 

@@ -1,6 +1,6 @@
 package parser;
 
-import augmentedTree.forest.Forest;
+import gtf.forest.Forest;
 import gtf.*;
 
 import java.io.BufferedReader;
@@ -127,56 +127,6 @@ public class GtfParser implements Iterable<Gene> {
         }
         transcript.codingSequence = codingSequence;
         gene.codingTranscripts.add(transcript);
-    }
-
-    private boolean CheckLine(String[] data){
-
-        boolean newGene = false;
-
-        exon = new Exon();
-        exon.region = new Region(Integer.valueOf(data[3]), Integer.valueOf(data[4]));
-        Gene tmpGene = new Gene();
-        Transcript tmpTranscript = new Transcript();
-        Annotation.setAttributes(tmpGene,tmpTranscript,exon,data[8]);
-
-        if(!tmpGene.getAttribute("gene_id").equals(gene.getAttribute("gene_id"))){
-            gene = tmpGene;
-            encounteredExons = new ArrayList<String>();
-            gene.chromosome = data[0];
-            gene.strand = data[6];
-            if(gene.strand.charAt(0)=='-'){
-                currentNegativeStrand = true;
-            }else{
-                currentNegativeStrand = false;
-            }
-            gene.id = gene.getAttribute("gene_id");
-
-
-            newGene = true;
-
-        }if(!tmpTranscript.getAttribute("transcript_id").equals(transcript.getAttribute("transcript_id"))){
-            transcript = tmpTranscript;
-            transcript.id = transcript.getAttribute("transcript_id");
-            gene.transcripts.add(transcript);
-        }
-
-        exon.id = exon.getAttribute("exon_id");
-        if(exon.id==null){
-            exon.id = gene.id+"_"+exon.region.start+":"+exon.region.end;
-        }
-        if(!encounteredExons.contains(exon.id)){
-            encounteredExons.add(exon.id);
-            gene.exons.add(exon);
-        }else{
-            exon = gene.exons.get(encounteredExons.indexOf(exon.id));
-        }
-        transcript.exons.add(exon);
-        transcript.regionVector.add(exon.region);
-
-        if(newGene){
-            return false;
-        }
-        return true;
     }
 
     public boolean processLine(String[] data){
