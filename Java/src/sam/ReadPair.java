@@ -3,6 +3,7 @@ package sam;
 import gtf.*;
 import htsjdk.samtools.AlignmentBlock;
 import htsjdk.samtools.SAMRecord;
+import parser.Parser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ public class ReadPair {
     public int mm;
     public int nsplit;
     public int clipping = 0;
+    public int gcount;
 
 
 
@@ -55,9 +57,7 @@ public class ReadPair {
     }
 
     public void updateRegions(){
-
-
-      /*  int s;
+        int s;
         int e;
         int lastEnd = -1;
         int i=-1;
@@ -65,7 +65,7 @@ public class ReadPair {
         for(AlignmentBlock ab : first.getAlignmentBlocks()){
             s = ab.getReferenceStart();
             e = s + ab.getLength()-1;
-            if(s==lastEnd){
+            if(s-1==lastEnd){
                 fwv.get(i).end = e;
             }else{
                 fwv.add(new Region(s,e));
@@ -81,7 +81,7 @@ public class ReadPair {
         for(AlignmentBlock ab : second.getAlignmentBlocks()){
             s = ab.getReferenceStart();
             e = s + ab.getLength()-1;
-            if(s==lastEnd){
+            if(s-1==lastEnd){
                 rwv.get(i).end = e;
             }else{
                 rwv.add(new Region(s,e));
@@ -96,23 +96,9 @@ public class ReadPair {
         rwl = rwv.length();
 
 
-*/
 
 
-        int s;
-        fwv = new RegionVector();
-        for(AlignmentBlock ab : first.getAlignmentBlocks()){
-            s = ab.getReferenceStart();
-            fwv.add(new Region(s,s+ab.getLength()-1));
-        }
-        rwv = new RegionVector();
-        for(AlignmentBlock ab : second.getAlignmentBlocks()){
-            s = ab.getReferenceStart();
-            rwv.add(new Region(s,s+ab.getLength()-1));
-        }
 
-        fwl = fwv.length();
-        rwl = rwv.length();
 
     }
 
@@ -173,10 +159,6 @@ public class ReadPair {
 
     public void mergeRegions() {
 
-      //  System.out.println(fwv);
-        //System.out.println(rwv);
-
-
         regionVector = new RegionVector();
         RegionVector left;
         RegionVector right;
@@ -227,9 +209,11 @@ public class ReadPair {
             nsplit=rl+ll-2;
         }
 
+       /* if(regionVector.toRegion().end!=alignmentEnd){
+            System.out.println("failed merging pair regions");
+        }*/
 
-       // System.out.println(regionVector);
-        //System.out.println();
+
 
     }
 
@@ -245,17 +229,10 @@ public class ReadPair {
                 if(cut.equals(fwv)){
                     cut = t.regionVector.cut(rwv.toRegion());
                     if(cut.equals(rwv)){
-                       // System.out.println(readName+"    "+g.id+"      "+t.id);
                         transcripts.add(t.id);
-                       // System.out.println(t.regionVector);
-                       // System.out.println(fwv);
-                        //System.out.println(rwv);
-                        //System.out.println();
+
                     }
                 }
-
-
-              //  System.out.println(cut);
 
             }
             if(transcripts.size()!=0){
@@ -268,6 +245,7 @@ public class ReadPair {
             }
         }
         if(matches.size()!=0){
+            gcount = matches.size();
             String s="";
             for (int i = 0; i < matches.size() - 1; i++) {
                 s+=matches.get(i)+"|";
@@ -278,4 +256,87 @@ public class ReadPair {
 
         return null;
     }
+
+
+    public String mergedGenes(List<Gene> genes){
+        List<String> merges = new ArrayList<>();
+        boolean merged;
+        Region intr;
+        Region piv;
+
+
+
+
+        for(Gene g : genes){
+
+
+
+
+
+            RegionVector m = g.mergedTranscripts();
+
+
+
+            merged = true;
+
+            int i=0;
+            int j=0;
+
+            while(i<m.length()-1 && j<regionVector.length()){
+                intr = new Region(m.get(i).end+1,m.get(i+1).start-1);
+                piv = regionVector.get(j);
+                if(piv.end<intr.start){
+                    j+=1;
+                }
+                else if(piv.start<=intr.end){
+                    merged = false;
+                    i=m.length();
+                }
+                else{
+                    i+=1;
+                }
+            }
+            if(merged){
+                merges.add(g.id+","+g.getAttribute("gene_biotype")+":MERGED");
+            }
+        }
+
+        if(merges.size()!=0){
+            gcount = merges.size();
+            String out = merges.get(0);
+            for (int i = 1; i < merges.size(); i++) {
+                out+="|"+merges.get(i);
+            }
+            return out;
+        }
+
+        return null;
+    }
+
+    public String intronicGenes(List<Gene> genes){
+        String out = genes.get(0).id+","+genes.get(0).getAttribute("gene_biotype")+":INTRON";
+        for (int i = 1; i < genes.size(); i++) {
+            out+="|"+ genes.get(i).id+","+genes.get(i).getAttribute("gene_biotype")+":INTRON";
+        }
+        gcount = genes.size();
+        return out;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

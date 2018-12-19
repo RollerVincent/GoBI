@@ -20,84 +20,10 @@
       <file leaf-file-name="MainReadAnnotation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/MainReadAnnotation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-403">
-              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="1605">
+              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadAnnotation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tools/ReadAnnotation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="109" column="38" lean-forward="true" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#ReadAnnotation#0;class#ReadAnnotation#0" expanded="false" />
-                <element signature="method#nextPair#0;class#ReadAnnotation#0" expanded="false" />
-                <element signature="method#close#0;class#ReadAnnotation#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Forest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/Forest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrandedForest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="55" column="103" lean-forward="true" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
-              <folding>
-                <element signature="method#StrandedForest#0;class#StrandedForest#0" expanded="false" />
-                <element signature="method#getNeighbourDistance#0;class#StrandedForest#0" expanded="false" />
-                <element signature="method#getAntisense#0;class#StrandedForest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnStrandedForest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/UnStrandedForest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="29" column="100" lean-forward="false" selection-start-line="29" selection-start-column="100" selection-end-line="29" selection-end-column="100" />
-              <folding>
-                <element signature="method#add#0;class#UnStrandedForest#0" expanded="false" />
-                <element signature="method#hasContainedGene#0;class#UnStrandedForest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegionVector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gtf/RegionVector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
-              <folding>
-                <element signature="e#233#234#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
-                <element signature="method#inverse_clamped#0;class#RegionVector#0" expanded="false" />
-                <element signature="method#cut#0;class#RegionVector#0" expanded="false" />
-                <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-                <element signature="e#3155#3156#0" expanded="true" />
-                <element signature="e#3202#3203#0" expanded="true" />
-                <element signature="class#RegionIterator#0" expanded="false" />
-                <element signature="method#RegionIterator#0;class#RegionIterator#0" expanded="false" />
-                <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,62 +32,31 @@
       <file leaf-file-name="Gene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#907#908#0" expanded="true" />
+                <element signature="method#setRegion#0;class#Gene#0" expanded="false" />
+                <element signature="method#mergedTranscripts#0;class#Gene#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Transcript.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gtf/Transcript.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadPair.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReadPair.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sam/ReadPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="261" column="57" lean-forward="false" selection-start-line="261" selection-start-column="57" selection-end-line="261" selection-end-column="57" />
+            <state relative-caret-position="39">
+              <caret line="300" column="13" lean-forward="false" selection-start-line="300" selection-start-column="13" selection-end-line="300" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#updateMisMatchCount#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#updateClipping#0;class#ReadPair#0" expanded="false" />
+                <element signature="method#updateRegions#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#updateBounds#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#check_inconsistency#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#inconsistent#0;class#ReadPair#0" expanded="false" />
                 <element signature="method#mergeRegions#0;class#ReadPair#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GtfParser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/parser/GtfParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="209" column="5" lean-forward="false" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
-              <folding>
-                <element signature="method#GtfParser#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#All#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#fillForest#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#loadGene#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#loadTranscript#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#loadCodingSequence#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#CheckLine#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#processLine#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#iterator#0;class#GtfParser#0" expanded="false" />
-                <element signature="method#next#0;class#6904:8205" expanded="false" />
+                <element signature="method#matchedTranscripts#0;class#ReadPair#0" expanded="false" />
+                <element signature="method#intronicGenes#0;class#ReadPair#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -179,18 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1150622</find>
-      <find>5705922</find>
-      <find>fwS</find>
-      <find>II</find>
-      <find>4333326</find>
-      <find>2817190</find>
-      <find>4594609</find>
-      <find>YBR210W</find>
-      <find>3780774</find>
-      <find>YBR048W</find>
-      <find>Q0297</find>
-      <find>3577118</find>
       <find>477428</find>
       <find>1321709</find>
       <find>sense:tr</find>
@@ -205,10 +88,22 @@
       <find>sense:t</find>
       <find>13561885</find>
       <find>1233524</find>
-      <find>System</find>
       <find>4749599</find>
       <find>|</find>
       <find>ENSG00000250575,pseudogene:ENST00000514436|ENSG00000237094,lincRNA:ENST00000425496</find>
+      <find>ENSG00000008130,protein_coding:MERGED</find>
+      <find>33316139</find>
+      <find>1696885</find>
+      <find>1696667</find>
+      <find>1685822</find>
+      <find>5957694</find>
+      <find>1684414</find>
+      <find>35171136</find>
+      <find>[</find>
+      <find>:m</find>
+      <find>25151392</find>
+      <find>om:20</find>
+      <find>System</find>
     </findStrings>
     <replaceStrings>
       <replace>regions</replace>
@@ -232,19 +127,20 @@
         <option value="$PROJECT_DIR$/src/gtf/Transcript.java" />
         <option value="$PROJECT_DIR$/src/tools/ExonSkipping.java" />
         <option value="$PROJECT_DIR$/src/main/MainExonSkipping.java" />
-        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
         <option value="$PROJECT_DIR$/src/tools/ReadSimulation.java" />
         <option value="$PROJECT_DIR$/src/main/MainReadSimulation.java" />
         <option value="$PROJECT_DIR$/src/gtf/Forest.java" />
         <option value="$PROJECT_DIR$/src/augmentedTree/forest/Forest.java" />
-        <option value="$PROJECT_DIR$/src/gtf/Gene.java" />
         <option value="$PROJECT_DIR$/src/gtf/RegionVector.java" />
         <option value="$PROJECT_DIR$/src/augmentedTree/forest/UnStrandedForest.java" />
         <option value="$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java" />
-        <option value="$PROJECT_DIR$/src/main/MainReadAnnotation.java" />
-        <option value="$PROJECT_DIR$/src/tools/ReadAnnotation.java" />
-        <option value="$PROJECT_DIR$/src/sam/ReadPair.java" />
         <option value="$PROJECT_DIR$/src/parser/GtfParser.java" />
+        <option value="$PROJECT_DIR$/rv_test 2.html" />
+        <option value="$PROJECT_DIR$/src/tools/ReadAnnotation.java" />
+        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/src/main/MainReadAnnotation.java" />
+        <option value="$PROJECT_DIR$/src/gtf/Gene.java" />
+        <option value="$PROJECT_DIR$/src/sam/ReadPair.java" />
       </list>
     </option>
   </component>
@@ -280,12 +176,6 @@
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="augmentedTree" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
@@ -589,7 +479,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -599,12 +488,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30949107" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19628432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20516963" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17469051" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1098546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -618,6 +507,34 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1098546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38651994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19628432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17469051" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -637,50 +554,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/parser/GtfParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="133" column="38" lean-forward="false" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
-            <element signature="method#Writer#0;class#Parser#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tools/ExonSkipping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainExonSkipping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gtf/Exon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -715,8 +588,8 @@
           <folding>
             <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
             <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-            <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="false" />
+            <element signature="e#3202#3203#0" expanded="false" />
             <element signature="method#hasNext#0;class#RegionIterator#0" expanded="false" />
             <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
           </folding>
@@ -809,8 +682,8 @@
           <folding>
             <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
             <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-            <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="false" />
+            <element signature="e#3202#3203#0" expanded="false" />
             <element signature="method#hasNext#0;class#RegionIterator#0" expanded="false" />
             <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
           </folding>
@@ -906,20 +779,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_plot_bases.tsv" />
     <entry file="file://$PROJECT_DIR$/test.txt" />
-    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="85" column="29" lean-forward="false" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
-            <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
-            <element signature="method#Writer#0;class#Parser#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/manifest/read_simulation_manifest/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -990,9 +849,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1544368950740" expanded="true" signature="16:835" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,10 +865,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="31" column="5" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#getIntersecting#0;class#Forestxxx#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,19 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gtf/Transcript.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1057,14 +898,14 @@
         <state relative-caret-position="502">
           <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
           <folding>
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="false" />
+            <element signature="e#270#271#0" expanded="false" />
             <element signature="method#inverse#0;class#RegionVector#0" expanded="false" />
             <element signature="method#inverse_clamped#0;class#RegionVector#0" expanded="false" />
             <element signature="method#cut#0;class#RegionVector#0" expanded="false" />
             <element signature="method#toString#0;class#RegionVector#0" expanded="false" />
-            <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="false" />
+            <element signature="e#3202#3203#0" expanded="false" />
             <element signature="class#RegionIterator#0" expanded="false" />
             <element signature="method#RegionIterator#0;class#RegionIterator#0" expanded="false" />
             <element signature="method#next#0;class#RegionIterator#0" expanded="false" />
@@ -1079,57 +920,6 @@
           <folding>
             <element signature="method#add#0;class#UnStrandedForest#0" expanded="false" />
             <element signature="method#hasContainedGene#0;class#UnStrandedForest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="55" column="103" lean-forward="true" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
-          <folding>
-            <element signature="method#StrandedForest#0;class#StrandedForest#0" expanded="false" />
-            <element signature="method#getNeighbourDistance#0;class#StrandedForest#0" expanded="false" />
-            <element signature="method#getAntisense#0;class#StrandedForest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainReadAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-403">
-          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tools/ReadAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="109" column="38" lean-forward="true" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ReadAnnotation#0;class#ReadAnnotation#0" expanded="false" />
-            <element signature="method#nextPair#0;class#ReadAnnotation#0" expanded="false" />
-            <element signature="method#close#0;class#ReadAnnotation#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sam/ReadPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="261" column="57" lean-forward="false" selection-start-line="261" selection-start-column="57" selection-end-line="261" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateMisMatchCount#0;class#ReadPair#0" expanded="false" />
-            <element signature="method#updateClipping#0;class#ReadPair#0" expanded="false" />
-            <element signature="method#updateBounds#0;class#ReadPair#0" expanded="false" />
-            <element signature="method#check_inconsistency#0;class#ReadPair#0" expanded="false" />
-            <element signature="method#inconsistent#0;class#ReadPair#0" expanded="false" />
-            <element signature="method#mergeRegions#0;class#ReadPair#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1149,6 +939,120 @@
             <element signature="method#processLine#0;class#GtfParser#0" expanded="false" />
             <element signature="method#iterator#0;class#GtfParser#0" expanded="false" />
             <element signature="method#next#0;class#6904:8205" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rv_test 2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/augmentedTree/forest/StrandedForest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="55" column="103" lean-forward="false" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
+          <folding>
+            <element signature="method#StrandedForest#0;class#StrandedForest#0" expanded="false" />
+            <element signature="method#getNeighbourDistance#0;class#StrandedForest#0" expanded="false" />
+            <element signature="method#getAntisense#0;class#StrandedForest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/histo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debug.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="5" column="155" lean-forward="false" selection-start-line="5" selection-start-column="155" selection-end-line="5" selection-end-column="155" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/ReadAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding>
+            <element signature="method#ReadAnnotation#0;class#ReadAnnotation#0" expanded="false" />
+            <element signature="method#nextPair#0;class#ReadAnnotation#0" expanded="false" />
+            <element signature="method#close#0;class#ReadAnnotation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="34" column="297" lean-forward="false" selection-start-line="34" selection-start-column="297" selection-end-line="34" selection-end-column="297" />
+          <folding>
+            <element signature="method#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#addOption#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#addOption#1;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#Compile#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#getArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#hasArgument#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#toString#0;class#ArgParser#0;class#Parser#0" expanded="false" />
+            <element signature="method#StringToFile#0;class#Parser#0" expanded="false" />
+            <element signature="method#Writer#0;class#Parser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_out.annot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainReadAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtf/Gene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="method#setRegion#0;class#Gene#0" expanded="false" />
+            <element signature="method#mergedTranscripts#0;class#Gene#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sam/ReadPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="300" column="13" lean-forward="false" selection-start-line="300" selection-start-column="13" selection-end-line="300" selection-end-column="13" />
+          <folding>
+            <element signature="method#updateMisMatchCount#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#updateClipping#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#updateRegions#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#updateBounds#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#check_inconsistency#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#inconsistent#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#mergeRegions#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#matchedTranscripts#0;class#ReadPair#0" expanded="false" />
+            <element signature="method#intronicGenes#0;class#ReadPair#0" expanded="false" />
           </folding>
         </state>
       </provider>

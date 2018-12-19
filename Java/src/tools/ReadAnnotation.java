@@ -2,16 +2,10 @@ package tools;
 
 
 import gtf.Gene;
-import gtf.RegionVector;
-import gtf.Transcript;
 import htsjdk.samtools.*;
-import parser.Parser;
 import sam.ReadPair;
-
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -97,21 +91,21 @@ public class ReadAnnotation {
 
     public String processPair(ReadPair pair, List<Gene> genes){
 
-
-
-
         pair.updateRegions();
         if(!pair.inconsistent()){
             pair.mergeRegions();
             pair.updateMisMatchCount();
             pair.updateClipping();
             String m = pair.matchedTranscripts(genes);
-            if(m!=null){
-                System.out.println(m);
+            if(m==null){
+                m = pair.mergedGenes(genes);
+                if(m==null){
+                    m = pair.intronicGenes(genes);
+                }
             }
 
 
-            return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:";
+            return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:"+pair.gcount+"\t"+m;
         }else{
             splitincons+=1;
             return pair.readName+"\tsplit-inconsistent:true";
@@ -135,10 +129,6 @@ public class ReadAnnotation {
         }
 
     }
-
-
-
-
 
     public void close(){
         records.close();
