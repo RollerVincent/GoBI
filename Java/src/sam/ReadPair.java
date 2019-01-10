@@ -22,12 +22,15 @@ public class ReadPair {
     public int nsplit;
     public int clipping = 0;
     public int gcount;
+    public int pcrindex;
 
-    RegionVector fwv;
-    RegionVector rwv;
-    int fwl;
-    int rwl;
+    public RegionVector fwv;
+    public RegionVector rwv;
+    public int fwl;
+    public int rwl;
     boolean turned;
+
+
 
 
 
@@ -59,6 +62,11 @@ public class ReadPair {
     }
 
 
+    public void updatePCRindex(PCRindex pcr){
+        pcrindex = pcr.getIndex(this);
+    }
+
+
     public void updateRegions(){
         int s;
         int e;
@@ -68,7 +76,7 @@ public class ReadPair {
         for(AlignmentBlock ab : first.getAlignmentBlocks()){
             s = ab.getReferenceStart();
             e = s + ab.getLength()-1;
-            if(s-1==lastEnd){
+            if(s<=lastEnd+1){
                 fwv.get(i).end = e;
             }else{
                 fwv.add(new Region(s,e));
@@ -82,7 +90,7 @@ public class ReadPair {
         for(AlignmentBlock ab : second.getAlignmentBlocks()){
             s = ab.getReferenceStart();
             e = s + ab.getLength()-1;
-            if(s-1==lastEnd){
+            if(s<=lastEnd+1){
                 rwv.get(i).end = e;
             }else{
                 rwv.add(new Region(s,e));
@@ -102,6 +110,12 @@ public class ReadPair {
         } else {
             alignmentStart = second.getAlignmentStart();
             turned=true;
+            if(first.getAlignmentStart()==alignmentStart){
+                if (first.getAlignmentEnd() < second.getAlignmentEnd()) {
+                    turned=false;
+                }
+            }
+
         }
         if (first.getAlignmentEnd() > second.getAlignmentEnd()) {
             alignmentEnd = first.getAlignmentEnd();
@@ -157,6 +171,9 @@ public class ReadPair {
         RegionVector right;
         int ll;
         int rl;
+
+
+
         if (turned) {
             right = fwv;
             left = rwv;
@@ -171,22 +188,40 @@ public class ReadPair {
         int s;
         int e;
         nsplit=0;
-        if(left.get(ll-1).end>=right.get(0).start){ // overlapping TODO: boolean overlaps as class variable ? split-inconsistency ?
+
+
+
+        if(left.get(ll-1).end>=right.get(0).start-1){ // overlapping TODO: boolean overlaps as class variable ? split-inconsistency ?
+            if(ll==1&&rl==1){
+                regionVector.add(new Region(alignmentStart,alignmentEnd));
+                nsplit=0;
+                return;
+            }
+
             for (int i = 0; i < ll; i++) {
                 s = left.get(i).start;
-                if (right.get(0).start <= left.get(i).end) {
+                if (right.get(0).start <= left.get(i).end+1 && left.get(i).end<=right.get(0).end) {
                     e = right.get(0).end;
-                    nsplit=i;
-                    i = ll;
+                    if(left.get(i).end!=right.get(0).end){
+                        i = ll;
+                    }else{
+                        if(left.toRegion().end<=right.toRegion().end){
+                            i=ll;
+                        }
+                    }
                 } else {
                     e = left.get(i).end;
                 }
+                //nsplit+=1;
                 regionVector.add(new Region(s, e));
             }
-            for (int i = 1; i < rl; i++) {
-                regionVector.add(new Region(right.get(i).start,right.get(i).end));
-                nsplit+=1;
+            if(left.toRegion().end<=right.toRegion().end) {
+                for (int i = 1; i < rl; i++) {
+                    regionVector.add(new Region(right.get(i).start, right.get(i).end));
+                    //nsplit+=1;
+                }
             }
+            nsplit = regionVector.length()-1;
         }else{
             for (int i = 0; i < ll; i++) {
                 regionVector.add(left.get(i));
@@ -195,6 +230,7 @@ public class ReadPair {
                 regionVector.add(right.get(i));
             }
             nsplit=rl+ll-2;
+
         }
     }
 

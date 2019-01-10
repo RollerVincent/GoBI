@@ -10,7 +10,7 @@ import java.util.List;
 public class Parser {
 
 
-    public static void drawRegionVectors(List<RegionVector> regionVectors, List<String> colors,String path, int width){
+    public static void drawRegionVectors(List<RegionVector> regionVectors, List<String> strands, List<String> colors,String path, int width){
         HashMap<Integer,String> colormap = new HashMap<>();
         for (int i = 0; i < colors.size(); i++) {
             colormap.put(i,colors.get(i));
@@ -30,7 +30,7 @@ public class Parser {
         int id=0;
         BufferedWriter writer = Writer(path);
         try {
-            writer.write("<html><body><div style='text-align:center;'><div style='display:inline-block; margin-top:20px; border-radius:4px; box-shadow: inset 0px 0px 5px #bbbbbb; padding:10px;  background-color:#f4f4f4;'><div id='container' style='overflow:auto; padding-bottom:20px; padding-top:10px; white-space:nowrap; background-color:#f4f4f4;'></div>\n");
+            writer.write("<html><body><div style='text-align:center;'><div style='display:inline-block; margin-top:20px; max-width:95vw;  border-radius:4px; box-shadow: inset 0px 0px 5px #bbbbbb; padding:10px;  background-color:#f4f4f4;'><div id='strand_container' style='float:left; color:#aaaaaa; font-weight:bolder; font-family:monospace; width:20px; padding-top:10px;'></div><div id='container' style='overflow:auto; padding-bottom:20px; padding-top:10px; white-space:nowrap; background-color:#f4f4f4;'></div>\n");
             writer.write(
                     "<script>\n" +
                             "    var w = "+width+";\n" +
@@ -39,11 +39,18 @@ public class Parser {
                             "    function addDiv(id){\n" +
                             "        document.getElementById('container').innerHTML+='<div id=\"'+id+'\" style=\"text-align:left; margin-top:2px; margin-bottom:2px; height:10px;\"></div>';\n" +
                             "    }\n" +
+                            "    function addStrand(strand){\n" +
+                            "        document.getElementById('strand_container').innerHTML+='<div style=\"margin-top:2px; margin-bottom:2px; height:10px; line-height:10px;\">'+strand+'</div>';\n" +
+                            "    }\n" +
                             "    function addRegion(id,l,c,h){\n" +
                             "        document.getElementById(id).innerHTML+='<div style=\"display:inline-block; width:'+(l*step)+'px; height:'+h+'px; position:relative; bottom:'+((10-h)/2)+'px; background-color:'+c+';\"></div>';\n" +
                             "    }\n"
 
             );
+            for(String s:strands){
+                writer.write("    addStrand('"+s+"');\n");
+            }
+
             for (RegionVector rv :regionVectors){
                 writer.write("    addDiv("+id+");\n");
                 writer.write("    addRegion("+id+","+(rv.toRegion().start-min)+",'#f4f4f4',10);\n");
@@ -63,6 +70,8 @@ public class Parser {
             e.printStackTrace();
         }
     }
+
+
 
 
     public static ArgParser ArgParser(String[] args){

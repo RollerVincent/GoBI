@@ -3,6 +3,7 @@ package tools;
 
 import gtf.Gene;
 import htsjdk.samtools.*;
+import sam.PCRindex;
 import sam.ReadPair;
 import java.io.File;
 import java.io.IOException;
@@ -15,13 +16,16 @@ public class ReadAnnotation {
     SAMRecordIterator records;
     SamReader samReader;
     String currentReference = " ";
+    public PCRindex pcr;
 
 
 
-    public ReadAnnotation(String path){
+
+    public ReadAnnotation(String path, boolean strandness){
         pairs = new HashMap<>();
         samReader = SamReaderFactory.makeDefault().validationStringency(ValidationStringency.SILENT).open(new File(path));
         records = samReader.iterator();
+        pcr = new PCRindex(strandness);
     }
 
 
@@ -77,7 +81,8 @@ public class ReadAnnotation {
     public String processPair(ReadPair pair, List<Gene> genes){
         pair.updateRegions();
         if(!pair.inconsistent()){
-            pair.mergeRegions(); //TODO: merge only after no transcript matched, needs nsplit method
+            pair.mergeRegions(); //TODO: merge only after no transcript matched, needs nsplit method + pcrindex
+            pair.updatePCRindex(pcr);
             pair.updateMisMatchCount();
             pair.updateClipping();
             String m = pair.matchedTranscripts(genes);
@@ -87,7 +92,7 @@ public class ReadAnnotation {
                     m = pair.intronicGenes(genes);
                 }
             }
-            return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:"+pair.gcount+"\t"+m;
+            return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:"+pair.gcount+"\t"+m+"\tpcrindex: "+pair.pcrindex;
         }else{
             splitincons+=1;
             return pair.readName+"\tsplit-inconsistent:true";
@@ -99,10 +104,11 @@ public class ReadAnnotation {
         pair.updateRegions();
         if(!pair.inconsistent()){
             pair.mergeRegions();
+            pair.updatePCRindex(pcr);
             pair.updateMisMatchCount();
             pair.updateClipping();
             gcount0+=1;
-            return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:0\tgdist:"+gdist+"\tantisense:"+antisense;
+            return pair.readName+"\tmm:"+pair.mm+"\tclipping:"+pair.clipping+"\tnsplit:"+pair.nsplit+"\tgcount:0\tgdist:"+gdist+"\tantisense:"+antisense+"\tpcrindex: "+pair.pcrindex;
         }else{
             splitincons+=1;
             return pair.readName+"\tsplit-inconsistent:true";

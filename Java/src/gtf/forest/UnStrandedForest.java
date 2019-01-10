@@ -9,10 +9,19 @@ import java.util.List;
 
 public class UnStrandedForest implements Forest {
 
-    private HashMap<String, IntervalTree<Gene>> content = new HashMap<>();
+    public HashMap<String, IntervalTree<Gene>> content = new HashMap<>();
     private List<Gene> genes;
+    public IntervalTree<Gene> currentTree;
 
+    @Override
+    public void selectTree(String ref){
+        currentTree = content.get(ref);
+    }
 
+    @Override
+    public boolean currentTreeNull(){
+        return currentTree == null;
+    }
 
     @Override
     public void add(Gene g) {
@@ -28,9 +37,15 @@ public class UnStrandedForest implements Forest {
 
 
     @Override
+    public void delete(String ref){
+        content.remove(ref);
+    }
+
+
+    @Override
     public List<Gene> getOuterGenes(ReadPair p) {
         genes = new ArrayList<>();
-        content.get(p.first.getReferenceName()).getIntervalsSpanning(p.alignmentStart,p.alignmentEnd,genes);
+        currentTree.getIntervalsSpanning(p.alignmentStart,p.alignmentEnd,genes);
         return genes;
     }
 
@@ -38,7 +53,7 @@ public class UnStrandedForest implements Forest {
     @Override
     public boolean hasContainedGene(ReadPair p) {
         genes = new ArrayList<>();
-        content.get(p.first.getReferenceName()).getIntervalsSpannedBy(p.alignmentStart,p.alignmentEnd,genes);
+        currentTree.getIntervalsSpannedBy(p.alignmentStart,p.alignmentEnd,genes);
         return genes.size()>0;
     }
 
@@ -48,14 +63,14 @@ public class UnStrandedForest implements Forest {
         genes = new ArrayList<>();
         int d1;
         int d2;
-        content.get(p.first.getReferenceName()).getIntervalsLeftNeighbor(p.alignmentStart,p.alignmentEnd,genes);
+        currentTree.getIntervalsLeftNeighbor(p.alignmentStart,p.alignmentEnd,genes);
         if(genes.size()>0){
             if(genes.get(0).region.start>=p.alignmentStart | genes.get(0).region.end>=p.alignmentStart){
                 return 0;
             }else{
                 d1 = p.alignmentStart - genes.get(0).region.end;
             }
-            content.get(p.first.getReferenceName()).getIntervalsRightNeighbor(p.alignmentStart,p.alignmentEnd,genes);
+            currentTree.getIntervalsRightNeighbor(p.alignmentStart,p.alignmentEnd,genes);
             if(genes.size()>1){
                 if(genes.get(1).region.start<=p.alignmentEnd | genes.get(1).region.end<=p.alignmentEnd){
                     return 0;
@@ -67,7 +82,7 @@ public class UnStrandedForest implements Forest {
                 return d1-1;
             }
         }else{
-            content.get(p.first.getReferenceName()).getIntervalsRightNeighbor(p.alignmentStart,p.alignmentEnd,genes);
+            currentTree.getIntervalsRightNeighbor(p.alignmentStart,p.alignmentEnd,genes);
             if(genes.get(0).region.start<=p.alignmentEnd | genes.get(0).region.end<=p.alignmentEnd){
                 return 0;
             }else{

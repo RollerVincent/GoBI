@@ -1,5 +1,7 @@
 package parser;
 
+import augmentedTree.Interval;
+import augmentedTree.IntervalTree;
 import gtf.forest.Forest;
 import gtf.*;
 
@@ -24,8 +26,12 @@ public class GtfParser implements Iterable<Gene> {
     private Gene lastGene;
     private Gene tmpGene;
     private Transcript tmpTranscript;
+    private boolean excludeCDS = false;
 
-
+    private Forest forest;
+    private Iterator<Gene> gtfIterator;
+    private  Gene cursor;
+    private String lastRef = null;
 
     public GtfParser(String path){
         try {
@@ -52,6 +58,10 @@ public class GtfParser implements Iterable<Gene> {
         }
     }
 
+    public void excludeCodingSequences(){
+        excludeCDS = true;
+    }
+
     public Annotation All(){
         Annotation a = new Annotation();
         for (Gene g:this){
@@ -69,12 +79,50 @@ public class GtfParser implements Iterable<Gene> {
     public void fillForest(Forest f){
 
         for(Gene g : this){
-
             g.setRegion();
             f.add(g);
         }
 
+
     }
+
+
+    public void initForest(Forest f){
+        forest = f;
+        gtfIterator = this.iterator();
+        cursor = gtfIterator.next();
+    }
+
+    public void seekTree(String ref){
+        forest.selectTree(ref);
+        if(forest.currentTreeNull()) {
+            if(lastRef!=null){
+                forest.delete(lastRef);
+                System.out.println("deleting trees for ref: "+lastRef);
+            }
+            System.out.println("seeking: "+ref);
+            while (!cursor.chromosome.equals(ref) && gtfIterator.hasNext()) {
+                cursor.setRegion();
+                forest.add(cursor);
+                cursor = gtfIterator.next();
+            }
+            while (cursor.chromosome.equals(ref) && gtfIterator.hasNext()) {
+                cursor.setRegion();
+                forest.add(cursor);
+                cursor = gtfIterator.next();
+            }
+            lastRef = ref;
+            if (!gtfIterator.hasNext()) {
+                cursor.setRegion();
+                forest.add(cursor);
+            }
+            forest.selectTree(ref);
+
+        }
+    }
+
+
+
 
     public void loadGene(String[] data,Gene tmpGene, Transcript tmpTranscript){
 
@@ -173,15 +221,18 @@ public class GtfParser implements Iterable<Gene> {
                     while ((line = reader.readLine()) != null) {
                         String[] data = line.split("\t");
                         if (data[2].charAt(0) == 'e') {                                         // EXON ANNOTATION
-                            if(!processLine(data)){
+                            if (!processLine(data)) {
                                 return lastGene;
                             }
-                        }else if(data[2].charAt(0) == 'C'){
-                            if(transcript.codingSequence==null){
-                                loadCodingSequence(data);
+                        } else if (!excludeCDS) {
+                            if (data[2].charAt(0) == 'C') {
+                                if (transcript.codingSequence == null) {
+                                    loadCodingSequence(data);
+                                }
+                                transcript.codingSequence.regionVector.add(new Region(Integer.valueOf(data[3]), Integer.valueOf(data[4])));
                             }
-                            transcript.codingSequence.regionVector.add(new Region(Integer.valueOf(data[3]), Integer.valueOf(data[4])));
                         }
+
                     }if(line==null){
                         done=true;
                         reader.close();
