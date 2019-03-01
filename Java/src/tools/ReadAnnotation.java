@@ -17,7 +17,7 @@ public class ReadAnnotation {
     SamReader samReader;
     String currentReference = " ";
     public PCRindex pcr;
-
+    boolean newRef = false;
 
 
 
@@ -45,7 +45,9 @@ public class ReadAnnotation {
                 firstOfPair = sr.getFirstOfPairFlag();
                 ref = sr.getReferenceName();
 
+
                 if(!ref.equals(currentReference)) {
+                    newRef = true;
                     currentReference = ref;
                     pairs = new HashMap<>();
                 }
@@ -58,9 +60,15 @@ public class ReadAnnotation {
                         p.second = sr;
                     }
                     pairs.remove(readName);
+
+                    if(newRef){
+                        p.newRef = newRef;
+                        newRef = false;
+                    }
                     return p;
                 } else {
                     newPair = new ReadPair(readName);
+
                     if (firstOfPair) {
                         newPair.first = sr;
                     } else {
@@ -78,6 +86,7 @@ public class ReadAnnotation {
 
     public int splitincons = 0;
     public int gcount0 = 0;
+
     public String processPair(ReadPair pair, List<Gene> genes){
         pair.updateRegions();
         if(!pair.inconsistent()){

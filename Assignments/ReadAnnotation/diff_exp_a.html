@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body style='margin:0;'>
+		
+		<script src="nice.js"></script>
+		
+		<div id="fufu"></div>
+		<div id="fufu2"></div>
+		
+		<script>
+		
+			
+
+				var plot = nice.plot('fufu');
+				plot.init(800,600,"X (P-Value)","P(x < X)","Type I error control",false,true,function (){
+					
+
+					
+					nice.load_script('data/a.js',function (){
+						var d1 = plot_data;
+
+
+						nice.load_script('data/uniform_a.js',function (){
+						    var d2 = plot_data;
+
+
+
+
+                        nice.load_script('data/tresh_a.js',function (){
+						    var d3 = plot_data;
+
+
+
+                            nice.load_script('data/stats_a.js',function (){
+						        var d4 = plot_data;
+
+						        plot.dashed(d3, color='#aaaaaa', colorOffset=0, alpha=0.7, width=10);
+						        plot.path(d1, color=null, colorOffset=0, alpha=0.7, width=10);
+						        plot.path(d2,color='#bbbbbb', colorOffset=0, alpha=0.7);
+                                plot.letters(d4,"&#9679;");
+                                plot.letters([{"x":0.05,"y":0.55,"group":"a"}],"&nbsp;a = 0.05", color="#aaaaaa", colorOffset=0, alpha=1, textAnchor='left-middle');
+
+                                plot.legend([d4[0].group,d4[1].group,d4[2].group],['-','-','-'],null,'Methods',colorOffset=0,width=55);
+                                plot.legend([d4[0].y.toFixed(3),d4[1].y.toFixed(3),d4[2].y.toFixed(3)],['&#9679;','&#9679;','&#9679;'],null,'P(x < a)',colorOffset=0,width=55);
+
+
+
+
+
+					        });
+
+
+					    });
+
+
+
+
+
+
+
+
+					    });
+
+
+
+
+
+					});
+				});
+				
+				
+
+				
+			
+			
+		
+		</script>
+		
+		
+	</body>
+</html>

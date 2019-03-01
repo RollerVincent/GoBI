@@ -77,14 +77,9 @@ public class MainReadAnnotation {
                 while ((pair = reads.nextPair()) != null) {
 
 
-
-                    parser.seekTree(pair.first.getReferenceName());
-
-
-
-
-
-
+                    if(pair.newRef) {
+                        parser.seekTree(pair.first.getReferenceName());
+                    }
 
 
                     pair.updateBounds();
@@ -104,7 +99,7 @@ public class MainReadAnnotation {
                    // System.out.println(reads.pcr.cache.size());
 
 
-                 /*   if(pair.readName.equals("390958")){
+               /*     if(pair.readName.equals("1546452")){
 
 
                         List<RegionVector> rv = new ArrayList<>();

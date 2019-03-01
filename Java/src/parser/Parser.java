@@ -1,13 +1,13 @@
 package parser;
 
 import gtf.*;
-
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.zip.GZIPInputStream;
 
 public class Parser {
+
 
 
     public static void drawRegionVectors(List<RegionVector> regionVectors, List<String> strands, List<String> colors,String path, int width){
@@ -70,8 +70,6 @@ public class Parser {
             e.printStackTrace();
         }
     }
-
-
 
 
     public static ArgParser ArgParser(String[] args){
@@ -170,6 +168,18 @@ public class Parser {
     }
 
 
+    public static BufferedReader Reader(String path){
+        try {
+
+            return new BufferedReader(new FileReader(path));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
     public static BufferedWriter Writer(String path){
         try {
             String[] s = path.split("/");
@@ -187,6 +197,14 @@ public class Parser {
         return null;
     }
 
-
+    public static BufferedReader GzipReader(String path){
+        try {
+            GZIPInputStream gzip = new GZIPInputStream(new FileInputStream(path));
+            return new BufferedReader(new InputStreamReader(gzip));
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }

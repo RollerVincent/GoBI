@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body style='margin:0;'>
+		
+		<script src="nice.js"></script>
+		
+		<div id="fufu"></div>
+		<div id="fufu2"></div>
+		
+		<script>
+		
+			
+
+				var plot = nice.plot('fufu');
+				plot.init(600,400,"FPR","TPR","Receiver Operating Characteristic",false,false,function (){					
+
+					
+					nice.load_script('data/b.js',function (){
+						var d1 = plot_data;
+
+						
+						nice.load_script('data/auroc_b.js',function (){
+							var d2 = plot_data;
+						
+							
+							plot.path(d1,color=null, colorOffset=0, alpha=0.8, dot="&#x25CF;", width=2);
+							
+							var d3 = [{"x":0, "y":0, "group":"random_classifier"}, {"x":1, "y":1, "group":"random_classifier"}];
+							plot.dashed(d3, color="#aaaaaa", colorOffset=null, alpha=0.7, width=3);
+							
+                            plot.legend([d2[0].group,d2[1].group,d2[2].group],['-','-','-'],null,'Methods',colorOffset=0,width=55);
+                            plot.legend([d2[0].x.toFixed(3),d2[1].x.toFixed(3),d2[2].x.toFixed(3)],['&#9679;','&#9679;','&#9679;'],null,'AUROC',colorOffset=0,width=55);
+
+							
+
+						});
+
+					});
+				});
+				
+				
+
+				
+			
+			
+		
+		</script>
+		
+		
+	</body>
+</html>

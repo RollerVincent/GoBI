@@ -3,8 +3,6 @@ package sam;
 import gtf.*;
 import htsjdk.samtools.AlignmentBlock;
 import htsjdk.samtools.SAMRecord;
-import parser.Parser;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +27,7 @@ public class ReadPair {
     public int fwl;
     public int rwl;
     boolean turned;
+    public boolean newRef = false;
 
 
 
@@ -232,6 +231,24 @@ public class ReadPair {
             nsplit=rl+ll-2;
 
         }
+    }
+
+
+    public  List<String> matchedTranscriptsRaw(List<Gene> genes){
+        RegionVector cut;
+        List<String> transcripts = new ArrayList<>();
+        for(Gene g : genes){
+            for(Transcript t : g.codingTranscripts){
+                cut = t.regionVector.cut(fwv.toRegion());
+                if(cut.equals(fwv)){
+                    cut = t.regionVector.cut(rwv.toRegion());
+                    if(cut.equals(rwv)){
+                        transcripts.add(t.id);
+                    }
+                }
+            }
+        }
+        return transcripts;
     }
 
 
